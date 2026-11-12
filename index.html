@@ -155,6 +155,17 @@
   .info span{color:#9fb0cc;font-size:14px}
   .info b{font-weight:700}
 
+  /* 지도 */
+  .map-box{margin-top:24px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .map-box iframe{display:block;width:100%;height:380px;border:0}
+  .map-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:18px 22px}
+  .map-bar b{font-size:16px}
+  .map-bar small{display:block;color:var(--muted);font-size:13px}
+  .map-btns{display:flex;gap:8px;flex-wrap:wrap}
+  .map-btns a{padding:10px 14px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--line)}
+  .map-btns a.naver{background:#03c75a;color:#fff;border-color:#03c75a}
+  @media (max-width:860px){.map-box iframe{height:280px}}
+
   footer{padding:36px 0 100px;color:var(--muted);font-size:13px;text-align:center}
 
   /* 모바일 하단 고정 버튼 */
@@ -324,6 +335,16 @@
           <a href="sms:010-9294-9094"><span>문자</span><b>010-9294-9094</b></a>
           <div><span>지점</span><b>현대자동차 미추홀대리점</b></div>
           <div><span>주소</span><b>인천 송림로 255</b></div>
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe src="https://maps.google.com/maps?q=%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%AF%B8%EC%B6%94%ED%99%80%EB%8C%80%EB%A6%AC%EC%A0%90%20%EC%9D%B8%EC%B2%9C%20%EC%86%A1%EB%A6%BC%EB%A1%9C%20255&hl=ko&z=16&output=embed" title="현대자동차 미추홀대리점 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-bar">
+          <div><b>현대자동차 미추홀대리점</b><small>인천 송림로 255 · 방문 전 전화 주시면 더 빠르게 안내해 드립니다</small></div>
+          <div class="map-btns">
+            <a class="naver" href="https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%AF%B8%EC%B6%94%ED%99%80%EB%8C%80%EB%A6%AC%EC%A0%90%20%EC%9D%B8%EC%B2%9C%20%EC%86%A1%EB%A6%BC%EB%A1%9C%20255" target="_blank" rel="noopener">네이버 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%AF%B8%EC%B6%94%ED%99%80%EB%8C%80%EB%A6%AC%EC%A0%90%20%EC%9D%B8%EC%B2%9C%20%EC%86%A1%EB%A6%BC%EB%A1%9C%20255" target="_blank" rel="noopener">구글 지도 길찾기</a>
+          </div>
         </div>
       </div>
     </div>
