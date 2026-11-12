@@ -57,6 +57,7 @@
 }
 </script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style>
   :root{
     --ink:#0f1a2b; --ink-2:#3b4656; --muted:#6b7585;
@@ -168,9 +169,19 @@
   @media (max-width:860px){.map-box iframe{height:280px}}
 
   footer{padding:36px 0 100px;color:var(--muted);font-size:13px;text-align:center}
-  footer .sns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
-  footer .sns a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2);font-weight:600;font-size:14px}
-  footer .sns a:hover{border-color:var(--accent);color:var(--accent)}
+  footer .sns{display:flex;gap:12px;justify-content:center;margin-bottom:16px}
+  .sns a,.hero-sns a{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:20px;transition:transform .15s}
+  .sns a:hover,.hero-sns a:hover{transform:translateY(-2px)}
+  .i-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+  .i-blog{background:#03c75a}
+  .i-tel{background:var(--accent)}
+  .i-sms{background:#fee500;color:#191919 !important}
+  .i-shop{background:#0f1a2b}
+  .i-map{background:#ea4335}
+  .hero-sns{display:flex;align-items:center;gap:10px;margin-top:22px}
+  .hero-sns span{color:#9fb0cc;font-size:14px;margin-left:4px}
+  .info span{display:inline-flex;align-items:center;gap:10px}
+  .ico{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-style:normal;flex-shrink:0}
 
   /* 모바일 하단 고정 버튼 */
   .mobile-bar{display:none}
@@ -220,6 +231,7 @@
           <a class="btn btn-primary" href="tel:010-9294-9094">📞 010-9294-9094</a>
           <a class="btn btn-kakao" href="sms:010-9294-9094">💬 문자로 견적 문의</a>
         </div>
+        <div class="hero-sns"><a href="https://www.instagram.com/hyundai_kyeon/" target="_blank" rel="noopener" aria-label="인스타그램" class="i-ig"><i class="fa-brands fa-instagram"></i></a><a href="https://blog.naver.com/kyeonkoon" target="_blank" rel="noopener" aria-label="네이버 블로그" class="i-blog"><i class="fa-solid fa-pen-nib"></i></a><span>출고 후기 · 소식 보기</span></div>
       </div>
       <div class="profile">
         <img class="photo" src="profile.jpg" alt="현대자동차 미추홀대리점 매장에서 안내하는 견상은 카마스터" width="800" height="1000">
@@ -335,12 +347,12 @@
           <p>상담만 받으셔도 괜찮습니다. 비교해 보시고 결정하세요.</p>
         </div>
         <div class="info">
-          <a href="tel:010-9294-9094"><span>전화</span><b>010-9294-9094</b></a>
-          <a href="sms:010-9294-9094"><span>문자</span><b>010-9294-9094</b></a>
-          <a href="https://www.instagram.com/hyundai_kyeon/" target="_blank" rel="noopener"><span>인스타그램</span><b>@hyundai_kyeon</b></a>
-          <a href="https://blog.naver.com/kyeonkoon" target="_blank" rel="noopener"><span>네이버 블로그</span><b>출고 후기 보기</b></a>
-          <div><span>지점</span><b>현대자동차 미추홀대리점</b></div>
-          <div><span>주소</span><b>인천 송림로 255</b></div>
+          <a href="tel:010-9294-9094"><span><i class="ico i-tel" aria-hidden="true"><i class="fa-solid fa-phone"></i></i>전화</span><b>010-9294-9094</b></a>
+          <a href="sms:010-9294-9094"><span><i class="ico i-sms" aria-hidden="true"><i class="fa-solid fa-comment-sms"></i></i>문자</span><b>010-9294-9094</b></a>
+          <a href="https://www.instagram.com/hyundai_kyeon/" target="_blank" rel="noopener"><span><i class="ico i-ig" aria-hidden="true"><i class="fa-brands fa-instagram"></i></i>인스타그램</span><b>@hyundai_kyeon</b></a>
+          <a href="https://blog.naver.com/kyeonkoon" target="_blank" rel="noopener"><span><i class="ico i-blog" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></i>네이버 블로그</span><b>출고 후기 보기</b></a>
+          <div><span><i class="ico i-shop" aria-hidden="true"><i class="fa-solid fa-car"></i></i>지점</span><b>현대자동차 미추홀대리점</b></div>
+          <div><span><i class="ico i-map" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></i>주소</span><b>인천 송림로 255</b></div>
         </div>
       </div>
       <div class="map-box">
@@ -358,7 +370,7 @@
 </main>
 
 <footer>
-  <div class="wrap"><div class="sns"><a href="https://www.instagram.com/hyundai_kyeon/" target="_blank" rel="noopener">Instagram @hyundai_kyeon</a><a href="https://blog.naver.com/kyeonkoon" target="_blank" rel="noopener">네이버 블로그</a></div>© 견상은 카마스터 · 현대자동차 미추홀대리점 · 인천 송림로 255</div>
+  <div class="wrap"><div class="sns"><a href="tel:010-9294-9094" aria-label="전화하기" class="i-tel"><i class="fa-solid fa-phone"></i></a><a href="https://www.instagram.com/hyundai_kyeon/" target="_blank" rel="noopener" aria-label="인스타그램" class="i-ig"><i class="fa-brands fa-instagram"></i></a><a href="https://blog.naver.com/kyeonkoon" target="_blank" rel="noopener" aria-label="네이버 블로그" class="i-blog"><i class="fa-solid fa-pen-nib"></i></a></div>© 견상은 카마스터 · 현대자동차 미추홀대리점 · 인천 송림로 255</div>
 </footer>
 
 <div class="mobile-bar">
