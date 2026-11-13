@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>현대차 견적 계산기 · 트림·옵션·색상·할부 | 견상은 카마스터</title>
-<meta name="description" content="현대자동차 전 차종(캐스퍼·아반떼·쏘나타·그랜저·투싼·싼타페·팰리세이드·아이오닉·넥쏘) 트림, 색상, 옵션을 골라 차량 가격과 월 할부금을 바로 계산해 보세요. 인천 미추홀 현대자동차 견상은 카마스터 010-9294-9094">
-<meta name="keywords" content="현대차 견적, 현대자동차 견적 계산기, 신차 할부 계산기, 팰리세이드 견적, 싼타페 견적, 투싼 견적, 그랜저 견적, 아이오닉 견적, 인천 현대자동차">
+<title>현대차·제네시스 견적 계산기 · 트림·옵션·색상·할부 | 견상은 카마스터</title>
+<meta name="description" content="현대자동차·제네시스 전 차종(캐스퍼·아반떼·쏘나타·그랜저·투싼·싼타페·팰리세이드·아이오닉·넥쏘, G80·G90·GV70·GV80·GV90) 트림, 색상, 옵션을 골라 차량 가격과 월 할부금을 바로 계산해 보세요. 인천 미추홀 현대자동차 견상은 카마스터 010-9294-9094">
+<meta name="keywords" content="현대차 견적, 현대자동차 견적 계산기, 신차 할부 계산기, 팰리세이드 견적, 싼타페 견적, 투싼 견적, 그랜저 견적, 아이오닉 견적, 제네시스 견적, G80 견적, GV80 견적, GV70 견적, 인천 제네시스, 인천 현대자동차">
 <link rel="canonical" href="https://kyeonkoon.github.io/quote.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="현대차 견적 계산기 | 견상은 카마스터">
+<meta property="og:title" content="현대차·제네시스 견적 계산기 | 견상은 카마스터">
 <meta property="og:description" content="트림·색상·옵션 선택하고 월 할부금까지 바로 계산">
 <meta property="og:url" content="https://kyeonkoon.github.io/quote.html">
 <meta property="og:image" content="https://kyeonkoon.github.io/og-image.jpg">
@@ -42,6 +42,9 @@
   .box h2 small{font-weight:500;color:var(--muted);font-size:13px;margin-left:auto}
   .hint{color:var(--muted);font-size:13px}
 
+  .brands{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+  .brand{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px;font-weight:800;font-size:16px;cursor:pointer}
+  .brand.on{border-color:var(--ink);background:var(--ink);color:#fff}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
   .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;cursor:pointer}
   .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -124,7 +127,7 @@
 <div class="head">
   <div class="wrap">
     <span class="eyebrow">현대자동차 미추홀대리점 · 견상은 카마스터</span>
-    <h1>현대차 견적 직접 계산하기</h1>
+    <h1>현대차·제네시스 견적 직접 계산하기</h1>
     <p>차종 → 트림 → 색상 → 옵션을 고르고, 할부 조건을 넣으면 월 납입금까지 바로 계산됩니다.<br>마음에 드는 견적은 문자로 보내주시면 이달 프로모션까지 반영해서 정확히 다시 뽑아드립니다.</p>
   </div>
 </div>
@@ -133,6 +136,7 @@
   <div>
     <div class="box">
       <h2><span class="n">1</span>차종 선택</h2>
+      <div class="brands" id="brands"></div>
       <div class="chips" id="cats"></div>
       <div class="models" id="models"></div>
     </div>
@@ -215,7 +219,8 @@
   var CARS = window.CARS || [];
   var CATS = ["전체","경차","세단","SUV","전기차","수소차"];
   var MONTHS = [12,24,36,48,60,72];
-  var st = { cat:"전체", car:null, trim:null, ext:null, int:null, opts:{}, months:60 };
+  var BRANDS = ["현대","제네시스"];
+  var st = { brand:"현대", cat:"전체", car:null, trim:null, ext:null, int:null, opts:{}, months:60 };
   var $ = function(id){ return document.getElementById(id); };
   var won = function(n){ return Math.round(n).toLocaleString("ko-KR") + "원"; };
   var man = function(n){ return (Math.round(n/10000)).toLocaleString("ko-KR") + "만원"; };
@@ -224,12 +229,16 @@
   var allowed = function(item){ return !item.trims || !st.trim || item.trims.indexOf(st.trim.id) > -1; };
   var findCar = function(id){ for(var i=0;i<CARS.length;i++) if(CARS[i].id===id) return CARS[i]; return null; };
 
+  var brandOf = function(m){ return m.brand || "현대"; };
+  function renderBrands(){
+    $("brands").innerHTML = BRANDS.map(function(b){ return '<button class="brand'+(st.brand===b?' on':'')+'" data-b="'+b+'">'+(b==="현대"?"현대자동차":"제네시스")+'</button>'; }).join("");
+  }
   function renderCats(){
-    $("cats").innerHTML = CATS.filter(function(c){ return c==="전체" || CARS.some(function(m){return m.category===c;}); })
+    $("cats").innerHTML = CATS.filter(function(c){ return c==="전체" || CARS.some(function(m){return brandOf(m)===st.brand && m.category===c;}); })
       .map(function(c){ return '<button class="chip'+(st.cat===c?' on':'')+'" data-c="'+c+'">'+c+'</button>'; }).join("");
   }
   function renderModels(){
-    $("models").innerHTML = CARS.filter(function(m){ return st.cat==="전체" || m.category===st.cat; }).map(function(m){
+    $("models").innerHTML = CARS.filter(function(m){ return brandOf(m)===st.brand && (st.cat==="전체" || m.category===st.cat); }).map(function(m){
       var min = Math.min.apply(null, m.trims.map(function(t){return t.price;}));
       return '<button class="model'+(st.car&&st.car.id===m.id?' on':'')+'" data-id="'+m.id+'"><b>'+esc(m.name)+'</b><small>'+esc(m.category)+' · '+man(min)+'~</small></button>';
     }).join("");
@@ -254,7 +263,8 @@
   function renderColors(){
     var m = st.car;
     if(!m || !st.trim){ $("colors").innerHTML = '<p class="empty">트림을 선택하면 고를 수 있는 색상이 나옵니다.</p>'; return; }
-    $("colors").innerHTML = '<div class="cols">'+colorList(m.exterior,"ext","외장 색상")+colorList(m.interior,"int","내장 색상")+'</div>';
+    var h = colorList(m.exterior,"ext","외장 색상")+colorList(m.interior,"int","내장 색상");
+    $("colors").innerHTML = h ? '<div class="cols">'+h+'</div>' : '<p class="empty">이 차종은 색상 정보가 아직 정리되지 않았습니다. 원하시는 색상은 상담 때 말씀해 주세요.</p>';
   }
   function renderOptions(){
     var m = st.car;
@@ -293,7 +303,7 @@
 
   function quoteText(c){
     var m = st.car, t = st.trim;
-    var L = ["[견적 문의] 홈페이지 견적 계산기", m.name+" "+(m.year||""), "트림: "+t.powertrain+" "+t.name+" ("+won(t.price)+")"];
+    var L = ["[견적 문의] 홈페이지 견적 계산기", (brandOf(m)==="제네시스"?"제네시스 ":"")+m.name+" "+(m.year||""), "트림: "+t.powertrain+" "+t.name+" ("+won(t.price)+")"];
     if(c.ext) L.push("외장: "+c.ext.name+(c.ext.price?" (+"+won(c.ext.price)+")":""));
     if(c.int) L.push("내장: "+c.int.name+(c.int.price?" (+"+won(c.int.price)+")":""));
     if(c.opts.length) L.push("옵션: "+c.opts.map(function(o){return o.name;}).join(", "));
@@ -354,7 +364,7 @@
   function loadHash(){
     var h = {}; location.hash.replace(/^#/,"").split("&").forEach(function(kv){ var a=kv.split("="); if(a[0]) h[a[0]]=decodeURIComponent(a[1]||""); });
     var m = findCar(h.car); if(!m) return;
-    st.car = m;
+    st.car = m; st.brand = brandOf(m);
     st.trim = m.trims.filter(function(t){return t.id===h.trim;})[0] || null;
     if(h.opt) h.opt.split(".").forEach(function(i){ st.opts[i]=true; });
     st.ext = h.ext || null; st.int = h["int"] || null;
@@ -378,6 +388,7 @@
   }
 
   // 이벤트
+  $("brands").addEventListener("click", function(e){ var b=e.target.closest(".brand"); if(!b) return; st.brand=b.dataset.b; st.cat="전체"; renderBrands(); renderCats(); renderModels(); });
   $("cats").addEventListener("click", function(e){ var b=e.target.closest(".chip"); if(!b) return; st.cat=b.dataset.c; renderCats(); renderModels(); });
   $("models").addEventListener("click", function(e){ var b=e.target.closest(".model"); if(!b) return; selectCar(b.dataset.id);
     if(window.innerWidth<900) $("trims").scrollIntoView({behavior:"smooth",block:"start"}); });
@@ -401,7 +412,7 @@
   var tt; function toast(msg){ var el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){el.classList.remove("show");},2200); }
 
   loadHash();
-  renderCats(); renderModels(); renderTrims(); renderColors(); renderOptions(); renderMonths(); renderSummary();
+  renderBrands(); renderCats(); renderModels(); renderTrims(); renderColors(); renderOptions(); renderMonths(); renderSummary();
 })();
 </script>
 </body>

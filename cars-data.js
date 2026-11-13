@@ -1,5 +1,5 @@
-/* 현대자동차 승용·SUV 가격 데이터 — 견적 계산기(quote.html)용
-   가격 정리일: 2026-11-13 · 출처: 현대자동차 공식 가격표 등 (차종별 source 참고)
+/* 현대자동차·제네시스 가격 데이터 — 견적 계산기(quote.html)용
+   가격 정리일: 2026-11-13 · 출처: 차종별 source 참고
    가격이 바뀌면 이 파일의 price 숫자만 고치면 됩니다. */
 window.PRICE_UPDATED = "2026-11-13";
 window.CARS = [
@@ -276,7 +276,8 @@ window.CARS = [
     ],
     "desc": "10.25인치 내비, 6스피커, 리어 와이퍼&와셔"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "casper-ev",
@@ -502,7 +503,8 @@ window.CARS = [
     ],
     "desc": "베이지 내장, 도트 패턴 도어 가니쉬"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "venue",
@@ -712,7 +714,8 @@ window.CARS = [
     ],
     "desc": "17인치 휠 적용 시 선택, 일부 출고센터 한정"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "kona",
@@ -1074,7 +1077,8 @@ window.CARS = [
     ],
     "desc": "알칸타라 스티어링·암레스트"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "kona-hybrid",
@@ -1391,7 +1395,8 @@ window.CARS = [
     ],
     "desc": "알칸타라 스티어링·암레스트"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "kona-ev",
@@ -1824,7 +1829,8 @@ window.CARS = [
     ],
     "desc": "알칸타라 스티어링·암레스트"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "avante",
@@ -2051,7 +2057,8 @@ window.CARS = [
     ],
     "desc": "B&O 12스피커, 외장앰프"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "avante-hybrid",
@@ -2262,7 +2269,8 @@ window.CARS = [
     ],
     "desc": "B&O 12스피커, 외장앰프"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "avante-n",
@@ -2409,7 +2417,8 @@ window.CARS = [
     "trims": null,
     "desc": "모노블록 4P 캘리퍼, 하이브리드 디스크, 단조 휠"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "sonata",
@@ -2833,7 +2842,8 @@ window.CARS = [
     ],
     "desc": "N Performance 19인치 휠 단품"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "sonata-hybrid",
@@ -3075,7 +3085,8 @@ window.CARS = [
     "trims": null,
     "desc": "주행/주차 녹화, AR 내비 (내비 적용 시)"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "grandeur",
@@ -3421,7 +3432,8 @@ window.CARS = [
     ],
     "desc": "스마트 비전 루프 (파노라마 선루프와 중복 불가)"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "grandeur-hybrid",
@@ -3665,7 +3677,8 @@ window.CARS = [
     ],
     "desc": "스마트 비전 루프 (파노라마 선루프와 중복 불가)"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "tucson",
@@ -3992,7 +4005,8 @@ window.CARS = [
     ],
     "desc": "12스피커, 외장앰프"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "santafe",
@@ -4369,7 +4383,8 @@ window.CARS = [
     ],
     "desc": "블랙 사이드스텝, 라이프스타일 패키지"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "palisade",
@@ -5086,7 +5101,8 @@ window.CARS = [
     ],
     "desc": "2열 멀티콘솔(UV-C·무선충전·공기청정), VIP 카매트"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "ioniq5",
@@ -5377,7 +5393,8 @@ window.CARS = [
     ],
     "desc": "블랙박스+AR내비 (Modern은 하이패스 패키지 선택 시)"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "ioniq5n",
@@ -5518,7 +5535,8 @@ window.CARS = [
     "trims": null,
     "desc": "도어 중앙부·핸들, 충전구, 내비 디스플레이"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "ioniq6",
@@ -5823,7 +5841,8 @@ window.CARS = [
     ],
     "desc": "블랙박스, 주차 감지 최대 5일"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "ioniq6n",
@@ -5924,7 +5943,8 @@ window.CARS = [
     "trims": null,
     "desc": "도어, 도어핸들, 충전구 도어"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "ioniq9",
@@ -6279,7 +6299,8 @@ window.CARS = [
     ],
     "desc": "도어 중앙부·엣지·핸들 (Exclusive 불가)"
    }
-  ]
+  ],
+  "brand": "현대"
  },
  {
   "id": "nexo",
@@ -6440,6 +6461,3956 @@ window.CARS = [
     ],
     "desc": "14.6인치 좌/우 모니터, OTT"
    }
+  ],
+  "brand": "현대"
+ },
+ {
+  "id": "g70",
+  "name": "G70",
+  "brand": "제네시스",
+  "category": "세단",
+  "year": "2026년형",
+  "taxNote": "개별소비세 5%·실효세율 조정(2026.07~) 기준, 2026년 10월 가격표. 공식 홈페이지 시작가는 45,500,000원으로 표기(2027년형 가격 미반영 가능)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/10535",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 45000000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 47470000
+   },
+   {
+    "id": "t3",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 48560000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 50830000
+   },
+   {
+    "id": "t5",
+    "name": "3.3 터보",
+    "powertrain": "가솔린 3.3 터보 2WD",
+    "price": 49950000
+   },
+   {
+    "id": "t6",
+    "name": "3.3 터보",
+    "powertrain": "가솔린 3.3 터보 AWD",
+    "price": 52420000
+   },
+   {
+    "id": "t7",
+    "name": "3.3 터보 스포츠 패키지",
+    "powertrain": "가솔린 3.3 터보 2WD",
+    "price": 52320000
+   },
+   {
+    "id": "t8",
+    "name": "3.3 터보 스포츠 패키지",
+    "powertrain": "가솔린 3.3 터보 AWD",
+    "price": 54790000
+   },
+   {
+    "id": "t9",
+    "name": "그래파이트 에디션",
+    "powertrain": "가솔린 3.3 터보 2WD",
+    "price": 59700000
+   },
+   {
+    "id": "t10",
+    "name": "그래파이트 에디션",
+    "powertrain": "가솔린 3.3 터보 AWD",
+    "price": 62170000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카본 메탈",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "그레이스풀 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바트나 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카와 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "로얄 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "레피스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "블레이징 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "캐번디시 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "레이싱 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베르비에 화이트 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "멜버른 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "본드 실버 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "벌리 블루 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙 모노톤 (레드 스티치)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/포그 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/벨벳 버건디 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/세비아 레드 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/울트라마린 블루 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/듄 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "포레스트 블루/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/샌드스톰 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스모키 그린/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "파퓰러 패키지",
+    "price": 4100000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "컨비니언스+하이테크+드라이빙 어시스턴스 패키지 통합"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 1290000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "전동 트렁크, 디지털 키 2, 앞좌석 무선충전"
+   },
+   {
+    "name": "하이테크 패키지",
+    "price": 1580000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "12.3인치 3D 클러스터, 어댑티브 헤드램프"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지",
+    "price": 1680000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "서라운드뷰, 후측방 모니터, 빌트인 캠, 보조배터리"
+   },
+   {
+    "name": "렉시콘 사운드 패키지",
+    "price": 1190000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "렉시콘 15스피커"
+   },
+   {
+    "name": "전자제어 서스펜션",
+    "price": 990000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "2.5 기본형 선택(3.3·스포츠 기본)"
+   },
+   {
+    "name": "와이드 선루프",
+    "price": 790000,
+    "trims": null,
+    "desc": "와이드 선루프"
+   },
+   {
+    "name": "천연가죽 패키지",
+    "price": 1190000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "천연가죽 시트, 다이아몬드 패턴 알루미늄 내장"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션",
+    "price": 2370000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "퀼팅 나파가죽 시트, 스웨이드 헤드라이닝 등"
+   },
+   {
+    "name": "스포츠 디자인 셀렉션",
+    "price": 1480000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "스포츠 나파가죽 시트, 스웨이드 내장"
+   },
+   {
+    "name": "19인치 미쉐린 타이어 & 다이아몬드 컷팅 휠",
+    "price": 690000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "225/40R19·255/35R19 (3.3 기본)"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 400000,
+    "trims": null,
+    "desc": "액세서리, 3년/6만km 보증"
+   },
+   {
+    "name": "플로팅 휠 캡",
+    "price": 90000,
+    "trims": null,
+    "desc": "액세서리"
+   },
+   {
+    "name": "카본 리어 스포일러",
+    "price": 880000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "액세서리"
+   },
+   {
+    "name": "알칸타라 인테리어 패키지",
+    "price": 430000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "액세서리, 스포츠 전용"
+   }
   ]
+ },
+ {
+  "id": "g70-sb",
+  "name": "G70 슈팅 브레이크",
+  "brand": "제네시스",
+  "category": "세단",
+  "year": "2026년형",
+  "taxNote": "개별소비세 5%·실효세율 조정(2026.07~) 기준. 공식 홈페이지 시작가는 47,480,000원으로 표기(2027년형 가격 미반영 가능)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11098",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 46980000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 49450000
+   },
+   {
+    "id": "t3",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 50540000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 52810000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바트나 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카와 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "블레이징 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "캐번디시 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베르비에 화이트 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "본드 실버 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "벌리 블루 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙 모노톤 (레드 스티치)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/포그 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/벨벳 버건디 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/듄 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/세비아 레드 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "포레스트 블루/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스모키 그린/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/샌드스톰 그레이 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "라이프스타일 패키지",
+    "price": 3760000,
+    "trims": null,
+    "desc": "디지털 키 2, 무선충전, 3D 클러스터, 지능형 헤드램프, DA 패키지"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지",
+    "price": 1680000,
+    "trims": null,
+    "desc": "서라운드뷰, 후측방 모니터, 빌트인 캠, 보조배터리"
+   },
+   {
+    "name": "렉시콘 사운드 패키지",
+    "price": 1190000,
+    "trims": null,
+    "desc": "렉시콘 15스피커"
+   },
+   {
+    "name": "와이드 선루프",
+    "price": 790000,
+    "trims": null,
+    "desc": "와이드 선루프"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션",
+    "price": 2370000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "퀼팅 나파가죽 시트, 스웨이드 헤드라이닝 등"
+   },
+   {
+    "name": "스포츠 디자인 셀렉션",
+    "price": 1480000,
+    "trims": [
+     "t3",
+     "t4"
+    ],
+    "desc": "스포츠 나파가죽 시트, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "19인치 미쉐린 타이어 & 다이아몬드 컷팅 휠",
+    "price": 690000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "225/40R19·255/35R19"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 400000,
+    "trims": null,
+    "desc": "액세서리, 3년/6만km 보증"
+   },
+   {
+    "name": "플로팅 휠 캡",
+    "price": 90000,
+    "trims": null,
+    "desc": "액세서리"
+   },
+   {
+    "name": "알칸타라 인테리어 패키지",
+    "price": 430000,
+    "trims": [
+     "t3",
+     "t4"
+    ],
+    "desc": "액세서리, 스포츠 전용"
+   }
+  ]
+ },
+ {
+  "id": "g80",
+  "name": "G80",
+  "brand": "제네시스",
+  "category": "세단",
+  "year": "2026년형",
+  "taxNote": "개별소비세 5%·실효세율 조정(2026.07~) 기준, 2026년 10월 가격표 (공식 홈페이지 시작가 60,630,000원 일치)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11644",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 60630000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 63430000
+   },
+   {
+    "id": "t3",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 64630000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 67430000
+   },
+   {
+    "id": "t5",
+    "name": "3.5 터보",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 67230000
+   },
+   {
+    "id": "t6",
+    "name": "3.5 터보",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 70030000
+   },
+   {
+    "id": "t7",
+    "name": "3.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 72830000
+   },
+   {
+    "id": "t8",
+    "name": "3.5 터보 스포츠 패키지",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 75630000
+   },
+   {
+    "id": "t9",
+    "name": "G80 BLACK",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 83600000
+   },
+   {
+    "id": "t10",
+    "name": "G80 BLACK",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 87900000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "제네바 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바트나 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "브루클린 브라운",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "캐번디시 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베르비에 화이트 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "에크루 카멜 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙 모노톤 (그레이 스티치)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙 모노톤 (레드 스티치)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "애쉬 그레이/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마룬 브라운/포레스트 블루 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "포레스트 블루/에크루 카멜 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/세비야 레드 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "파퓰러 패키지",
+    "price": 4300000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "드라이빙 어시스턴스 Ⅰ·Ⅱ + 빌트인 캠 패키지"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지Ⅰ",
+    "price": 1950000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "서라운드뷰, 후측방 모니터, 원격 스마트 주차 보조 2 등"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지Ⅱ",
+    "price": 2000000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "전방충돌방지 2, 고속도로 주행 보조 2, 지능형 헤드램프"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비 (BLACK 기본)"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 1300000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "동승석 에르고 모션 시트, 고스트 도어 클로징, 항균"
+   },
+   {
+    "name": "2열 컴포트 패키지",
+    "price": 2700000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "3존+ 공조, 2열 전동·통풍 시트, 2열 무선충전"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t8"
+    ],
+    "desc": "18스피커, ANC-R (BLACK 기본)"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션Ⅰ",
+    "price": 1500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "천연가죽 시트, 헤어라인 알루미늄 내장"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션Ⅱ",
+    "price": 3000000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "프라임 나파가죽 시트, 리얼 우드, 투톤 스티어링"
+   },
+   {
+    "name": "스포츠 디자인 셀렉션",
+    "price": 2700000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "프라임 나파가죽, 카본 내장재, 투톤 스티어링"
+   },
+   {
+    "name": "프리뷰 전자제어 서스펜션",
+    "price": 1100000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "2.5 기본형 선택(3.5·스포츠·BLACK 기본)"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "19인치 휠 & 타이어 (A/B/C 택1)",
+    "price": 1200000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "245/45R19 콘티넨탈 (3.5 기본)"
+   },
+   {
+    "name": "20인치 피렐리 타이어 & 휠",
+    "price": 3000000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "245/40R20"
+   },
+   {
+    "name": "20인치 피렐리 타이어 & 휠",
+    "price": 700000,
+    "trims": [
+     "t5",
+     "t6"
+    ],
+    "desc": "245/40R20"
+   },
+   {
+    "name": "후석 스마트 엔터테인먼트 시스템",
+    "price": 3000000,
+    "trims": null,
+    "desc": "액세서리, 14.6인치 듀얼 모니터"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 450000,
+    "trims": null,
+    "desc": "액세서리, 3년/6만km 보증"
+   },
+   {
+    "name": "플로팅 휠 캡",
+    "price": 90000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "액세서리 (BLACK 전용 캡 0원)"
+   }
+  ]
+ },
+ {
+  "id": "eg80",
+  "name": "Electrified G80",
+  "brand": "제네시스",
+  "category": "전기차",
+  "year": "2027년형",
+  "taxNote": "세제혜택 후(실효세율 조정 2026.07~), 보조금 미반영. 세제혜택 전 89,080,000원. 국고보조금 270만원(예산 소진 시 종료)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11708",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "기본",
+    "powertrain": "전기 듀얼모터 AWD 94.5kWh",
+    "price": 84790000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "제네바 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마티라 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "브루클린 브라운",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "에크루 카멜 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "프러시안 블루 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "애쉬 그레이/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "파퓰러 패키지",
+    "price": 5400000,
+    "trims": null,
+    "desc": "HUD + 드라이빙 어시스턴스 Ⅰ·Ⅱ + 빌트인 캠"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": null,
+    "desc": "HUD"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지Ⅰ",
+    "price": 1950000,
+    "trims": null,
+    "desc": "서라운드뷰, 후측방 모니터, 원격 스마트 주차 보조 2 등"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지Ⅱ",
+    "price": 2000000,
+    "trims": null,
+    "desc": "고속도로 주행 보조 2, 지능형 헤드램프 등"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "빌트인 캠 2(QHD), 보조배터리, AR 내비"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션",
+    "price": 3000000,
+    "trims": null,
+    "desc": "프라임 나파가죽, 오픈포어 리얼우드, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 1600000,
+    "trims": null,
+    "desc": "앞좌석 에르고 모션 시트, 실외 V2L 어댑터, 항균"
+   },
+   {
+    "name": "2열 컴포트 패키지",
+    "price": 4500000,
+    "trims": null,
+    "desc": "2열 전동·통풍·메모리 시트, 3존+ 공조, 전동 커튼"
+   },
+   {
+    "name": "후륜 조향 시스템",
+    "price": 1500000,
+    "trims": null,
+    "desc": "후륜 조향"
+   },
+   {
+    "name": "후석 스마트 엔터테인먼트 시스템",
+    "price": 3000000,
+    "trims": null,
+    "desc": "액세서리, 14.6인치 듀얼 모니터"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 450000,
+    "trims": null,
+    "desc": "액세서리, 3년/6만km 보증"
+   },
+   {
+    "name": "플로팅 휠 캡",
+    "price": 90000,
+    "trims": null,
+    "desc": "액세서리"
+   }
+  ]
+ },
+ {
+  "id": "g90",
+  "name": "G90",
+  "brand": "제네시스",
+  "category": "세단",
+  "year": "2025년형",
+  "taxNote": "개별소비세 5%·실효세율 조정(2026.07~) 기준 (공식 홈페이지 시작가 97,480,000원 일치). 페이스리프트 2026년 12월 출시 예정 보도",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11054",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "3.5 터보 5인승",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 97480000
+   },
+   {
+    "id": "t2",
+    "name": "3.5 터보 5인승",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 100980000
+   },
+   {
+    "id": "t3",
+    "name": "3.5 터보 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 104380000
+   },
+   {
+    "id": "t4",
+    "name": "3.5 터보 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 107880000
+   },
+   {
+    "id": "t5",
+    "name": "48V e-S/C 5인승",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 2WD",
+    "price": 103480000
+   },
+   {
+    "id": "t6",
+    "name": "48V e-S/C 5인승",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 106980000
+   },
+   {
+    "id": "t7",
+    "name": "48V e-S/C 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 2WD",
+    "price": 110380000
+   },
+   {
+    "id": "t8",
+    "name": "48V e-S/C 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 113880000
+   },
+   {
+    "id": "t9",
+    "name": "G90 BLACK 5인승",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 129440000
+   },
+   {
+    "id": "t10",
+    "name": "G90 BLACK 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 132840000
+   },
+   {
+    "id": "t11",
+    "name": "G90 BLACK 5인승",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 135640000
+   },
+   {
+    "id": "t12",
+    "name": "G90 BLACK 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 139040000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마우이 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바릴로체 브라운",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "발렌시아 골드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베르비에 화이트 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/보르도 브라운 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "어반 브라운/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "갤럭시 블랙/모던 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "벨벳 버건디/듄 베이지 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "파퓰러 컬렉션 (컬렉션 택1)",
+    "price": 5600000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "앞좌석 컴포트 + 뒷좌석 컴포트Ⅰ"
+   },
+   {
+    "name": "파퓰러 컬렉션 (컬렉션 택1)",
+    "price": 2100000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "앞좌석 컴포트 (VIP는 뒷좌석 컴포트Ⅰ 기본)"
+   },
+   {
+    "name": "프리미엄 컬렉션 (컬렉션 택1)",
+    "price": 17100000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "파퓰러 + 시그니처 셀렉션, 이지클로즈, 에어서스, 후륜조향"
+   },
+   {
+    "name": "프리미엄 컬렉션 (컬렉션 택1)",
+    "price": 13600000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "파퓰러 + 시그니처 셀렉션, 이지클로즈, 에어서스, 후륜조향"
+   },
+   {
+    "name": "프레스티지 컬렉션 (컬렉션 택1)",
+    "price": 23000000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "프리미엄 + 뒷좌석 컴포트Ⅱ, 후석 엔터테인먼트"
+   },
+   {
+    "name": "프레스티지 컬렉션 (컬렉션 택1)",
+    "price": 19500000,
+    "trims": [
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "프리미엄 + 뒷좌석 컴포트Ⅱ, 후석 엔터테인먼트"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션",
+    "price": 5500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "퀼팅 프라임 나파가죽, 리얼우드, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "앞좌석 컴포트 패키지",
+    "price": 2500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "지능형 헤드램프, 앞좌석 에르고 릴렉싱 시트"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지Ⅰ",
+    "price": 3500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6"
+    ],
+    "desc": "뒷좌석 전동·통풍·메모리, 레그레스트, 3존 공조"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지Ⅱ",
+    "price": 2900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "뒷좌석 마사지, VIP 풋레스트 (앞좌석 컴포트 동시 240만)"
+   },
+   {
+    "name": "멀티 챔버 에어 서스펜션",
+    "price": 3500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "멀티 챔버 에어 서스펜션"
+   },
+   {
+    "name": "후륜 조향 시스템",
+    "price": 1500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "후륜 조향"
+   },
+   {
+    "name": "이지 클로즈 시스템",
+    "price": 1500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "도어 자동 닫힘"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 3900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "23스피커 프리미어 3D 사운드"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 2000000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 800000,
+    "trims": null,
+    "desc": "빌트인 캠, 보조배터리"
+   },
+   {
+    "name": "20인치 미쉐린 타이어 & 휠",
+    "price": 1000000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3",
+     "t4"
+    ],
+    "desc": "245/45R20 다이아몬드 컷팅/다크 하이퍼 실버 (48V 기본)"
+   },
+   {
+    "name": "21인치 미쉐린 타이어 & 다이아몬드 컷팅 휠",
+    "price": 1200000,
+    "trims": [
+     "t5",
+     "t6",
+     "t7",
+     "t8"
+    ],
+    "desc": "245/40R21"
+   },
+   {
+    "name": "전동식 후석 스마트 엔터테인먼트 시스템",
+    "price": 3100000,
+    "trims": null,
+    "desc": "액세서리, 14.6인치 듀얼 모니터"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 540000,
+    "trims": null,
+    "desc": "액세서리"
+   },
+   {
+    "name": "플로팅 휠 캡 & 메탈 페달",
+    "price": 200000,
+    "trims": [
+     "t1",
+     "t2",
+     "t5",
+     "t6",
+     "t3",
+     "t4",
+     "t7",
+     "t8"
+    ],
+    "desc": "액세서리 (BLACK 전용 휠 캡 0원)"
+   }
+  ]
+ },
+ {
+  "id": "g90-lwb",
+  "name": "G90 롱 휠베이스",
+  "brand": "제네시스",
+  "category": "세단",
+  "year": "2025년형",
+  "taxNote": "개별소비세 5%·실효세율 조정(2026.07~) 기준 (공식 홈페이지 시작가 167,690,000원 일치)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11054",
+  "sourceDate": "2026-11-13",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "LWB 5인승",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 167690000
+   },
+   {
+    "id": "t2",
+    "name": "LWB 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 176590000
+   },
+   {
+    "id": "t3",
+    "name": "LWB BLACK 5인승",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 174980000
+   },
+   {
+    "id": "t4",
+    "name": "LWB BLACK 4인승 VIP",
+    "powertrain": "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저 AWD",
+    "price": 178880000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마우이 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "태즈먼 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "한라산 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바릴로체 브라운",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "발렌시아 골드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베르비에 화이트 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광·추가금 미확인)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/보르도 브라운 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "어반 브라운/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "갤럭시 블랙/모던 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "벨벳 버건디/듄 베이지 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "파노라마 선루프",
+    "price": 2500000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지",
+    "price": 5000000,
+    "trims": [
+     "t1"
+    ],
+    "desc": "뒷좌석 컴포트 사양 (4인승 VIP 기본)"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 800000,
+    "trims": null,
+    "desc": "빌트인 캠, 보조배터리"
+   },
+   {
+    "name": "전동식 후석 스마트 엔터테인먼트 시스템",
+    "price": 3100000,
+    "trims": null,
+    "desc": "액세서리, 14.6인치 듀얼 모니터"
+   },
+   {
+    "name": "차량 보호 필름",
+    "price": 540000,
+    "trims": null,
+    "desc": "액세서리"
+   },
+   {
+    "name": "플로팅 휠 캡 & 메탈 페달",
+    "price": 200000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "액세서리 (BLACK 전용 휠 캡 0원)"
+   }
+  ]
+ },
+ {
+  "id": "gv60",
+  "name": "GV60",
+  "brand": "제네시스",
+  "category": "전기차",
+  "year": "2027년형",
+  "taxNote": "세제혜택 후 가격(개별소비세 실효세율 조정 기준, 2026.07~), 보조금 미반영. 퍼포먼스 AWD는 세제혜택 미적용 가격. 1,000원 단위 반올림",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11759",
+  "sourceDate": "2026-07-01",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "스탠다드 2WD (19인치)",
+    "powertrain": "전기 2WD",
+    "price": 64905000
+   },
+   {
+    "id": "t2",
+    "name": "스탠다드 AWD (19인치)",
+    "powertrain": "전기 AWD",
+    "price": 68517000
+   },
+   {
+    "id": "t3",
+    "name": "스탠다드 AWD (20인치)",
+    "powertrain": "전기 AWD",
+    "price": 70703000
+   },
+   {
+    "id": "t4",
+    "name": "퍼포먼스 AWD (21인치)",
+    "powertrain": "전기 AWD 퍼포먼스",
+    "price": 76680000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "애쉬 그레이/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "파인그로브 그린/골드코스트 옐로우 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "프러시안 블루/스카이 블루 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "갤럭시 블랙/아쿠아 그린 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "시그니처 디자인 셀렉션 I",
+    "price": 1500000,
+    "trims": null,
+    "desc": "천연가죽 시트, 알루미늄 내장재"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II",
+    "price": 2200000,
+    "trims": null,
+    "desc": "퀼팅 나파가죽 시트, 스웨이드 도어 트림"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II (스웨이드 패키지)",
+    "price": 2700000,
+    "trims": null,
+    "desc": "셀렉션 II + 스웨이드 헤드라이닝/필러"
+   },
+   {
+    "name": "파퓰러 패키지 I",
+    "price": 4700000,
+    "trims": null,
+    "desc": "HUD + 컨비니언스 + 드라이빙 어시스턴스 I"
+   },
+   {
+    "name": "파퓰러 패키지 II",
+    "price": 6800000,
+    "trims": null,
+    "desc": "파퓰러 I + 2열 컴포트 + 빌트인 캠"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": null,
+    "desc": "HUD"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 2000000,
+    "trims": null,
+    "desc": "1열 통풍, 에르고 18way 시트, 메모리, 릴렉션 시트"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 I",
+    "price": 1950000,
+    "trims": null,
+    "desc": "서라운드뷰, 후측방 모니터, 원격주차 보조 2"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 II",
+    "price": 2000000,
+    "trims": null,
+    "desc": "HDA 2, 전방충돌방지 확장, 지능형 헤드램프"
+   },
+   {
+    "name": "2열 컴포트 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "뒷좌석 열선, 수동 커튼, 러기지 스크린/네트"
+   },
+   {
+    "name": "디지털 사이드 미러",
+    "price": 1500000,
+    "trims": null,
+    "desc": "디지털 사이드 미러"
+   },
+   {
+    "name": "비전 루프",
+    "price": 1000000,
+    "trims": null,
+    "desc": "비전 루프"
+   },
+   {
+    "name": "하이테크 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "디지털 키 2, 페이스 커넥트"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1800000,
+    "trims": null,
+    "desc": "B&O 17스피커, ANC-R"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 1500000,
+    "trims": null,
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비, 디지털 센터 미러"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 410000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "프로텍션 매트 패키지 (액세서리)",
+    "price": 250000,
+    "trims": null,
+    "desc": "매트 패키지"
+   },
+   {
+    "name": "플로팅 휠캡 (액세서리)",
+    "price": 90000,
+    "trims": null,
+    "desc": "플로팅 휠캡"
+   }
+  ]
+ },
+ {
+  "id": "gv60-magma",
+  "name": "GV60 마그마",
+  "brand": "제네시스",
+  "category": "전기차",
+  "year": "2026년형",
+  "taxNote": "개별소비세 실효세율 조정 기준(2026.07~), 고성능 모델로 세제혜택 표기 없음, 보조금 미반영",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11841",
+  "sourceDate": "2026-07-01",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "마그마 AWD",
+    "powertrain": "전기 AWD (고성능)",
+    "price": 97880000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "마그마 오렌지",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤 (마그마 오렌지 스티치)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙 모노톤 (애쉬 화이트 스티치)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "21인치 그라파이트 그레이 무광 단조휠",
+    "price": 3700000,
+    "trims": null,
+    "desc": "경량 단조휠, 275/35R21 피렐리 (캘리퍼 색 선택)"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 410000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "프로텍션 매트 패키지 (액세서리)",
+    "price": 250000,
+    "trims": null,
+    "desc": "매트 패키지"
+   }
+  ]
+ },
+ {
+  "id": "gv70",
+  "name": "GV70",
+  "brand": "제네시스",
+  "category": "SUV",
+  "year": "2027년형",
+  "taxNote": "출고가(2026.07 출시, 개별소비세 실효세율 조정 이후 가격표 기준)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/10534",
+  "sourceDate": "2026-10-01",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보 2WD",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 54730000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보 AWD",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 57730000
+   },
+   {
+    "id": "t3",
+    "name": "2.5 터보 스포츠 패키지 2WD",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 57530000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 스포츠 패키지 AWD",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 60530000
+   },
+   {
+    "id": "t5",
+    "name": "2.5 터보 그래파이트 패키지 2WD",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 63780000
+   },
+   {
+    "id": "t6",
+    "name": "2.5 터보 그래파이트 패키지 AWD",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 66780000
+   },
+   {
+    "id": "t7",
+    "name": "3.5 터보 2WD",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 60230000
+   },
+   {
+    "id": "t8",
+    "name": "3.5 터보 AWD",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 63230000
+   },
+   {
+    "id": "t9",
+    "name": "3.5 터보 스포츠 패키지 2WD",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 63580000
+   },
+   {
+    "id": "t10",
+    "name": "3.5 터보 스포츠 패키지 AWD",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 66580000
+   },
+   {
+    "id": "t11",
+    "name": "3.5 터보 그래파이트 패키지 2WD",
+    "powertrain": "가솔린 3.5 터보 2WD",
+    "price": 66180000
+   },
+   {
+    "id": "t12",
+    "name": "3.5 터보 그래파이트 패키지 AWD",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 69180000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "카본 메탈",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "로얄 블루",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "베링 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "카디프 그린",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "마우나 레드",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "바로사 버건디",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "멜버른 그레이 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "브런즈윅 그린 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "바로사 버건디 (무광)",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "옵시디언 블랙/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "어반 브라운/프로즌 그레이 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "오션웨이브 블루/하바나 브라운 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "슬레이트 그레이/벨벳 버건디 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "옵시디언 블랙/세비아 레드 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "울트라마린 블루 모노톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "오션웨이브 블루/파인그로브 그린 투톤",
+    "price": 0,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8",
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ]
+   },
+   {
+    "name": "옵시디언 블랙/울트라마린 블루 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "시그니처 디자인 셀렉션 I",
+    "price": 1700000,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8"
+    ],
+    "desc": "천연가죽 시트, 브러시드 알루미늄 내장재"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II",
+    "price": 3000000,
+    "trims": [
+     "t1",
+     "t2",
+     "t7",
+     "t8"
+    ],
+    "desc": "퀼팅 프라임 나파가죽, 투톤 가죽 스티어링"
+   },
+   {
+    "name": "스포츠 디자인 셀렉션 I",
+    "price": 2300000,
+    "trims": [
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ],
+    "desc": "스웨이드/나파 시트, 리얼 카본 내장재"
+   },
+   {
+    "name": "스포츠 디자인 셀렉션 II",
+    "price": 2300000,
+    "trims": [
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ],
+    "desc": "퀼팅 나파 시트, 스포츠 무드램프"
+   },
+   {
+    "name": "파퓰러 패키지 I",
+    "price": 2950000,
+    "trims": null,
+    "desc": "HUD + 드라이빙 어시스턴스 I"
+   },
+   {
+    "name": "파퓰러 패키지 II",
+    "price": 6600000,
+    "trims": null,
+    "desc": "파퓰러 I + DA II + 2열 컴포트 + 빌트인 캠"
+   },
+   {
+    "name": "프레스티지 패키지",
+    "price": 11900000,
+    "trims": null,
+    "desc": "파퓰러 II + 파노라마 선루프 + 컨비니언스 + B&O"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": null,
+    "desc": "HUD"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 I",
+    "price": 1950000,
+    "trims": null,
+    "desc": "서라운드뷰, 후측방 모니터, 원격주차 보조"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 II",
+    "price": 2000000,
+    "trims": null,
+    "desc": "HDA 2, 스마트 크루즈, 전방충돌방지 확장"
+   },
+   {
+    "name": "2열 컴포트 패키지",
+    "price": 1100000,
+    "trims": null,
+    "desc": "수동 커튼, 3존 공조, 뒷좌석 통풍, 220V"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 2500000,
+    "trims": null,
+    "desc": "에르고 모션 18way, 동승석 메모리, 디지털 센터 미러"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1700000,
+    "trims": null,
+    "desc": "B&O 16스피커, ANC-R"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "프리뷰 전자제어 서스펜션",
+    "price": 1100000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3",
+     "t4"
+    ],
+    "desc": "프리뷰 ECS (3.5 터보·그래파이트 기본)"
+   },
+   {
+    "name": "전자식 차동제한장치(e-LSD)",
+    "price": 350000,
+    "trims": [
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ],
+    "desc": "e-LSD (스포츠)"
+   },
+   {
+    "name": "235/55R19 미쉐린 타이어 & 휠",
+    "price": 300000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "19인치 신규 휠 (2.5 터보)"
+   },
+   {
+    "name": "255/40R21 미쉐린 타이어 & 휠",
+    "price": 2300000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "21인치 휠 (2.5 터보)"
+   },
+   {
+    "name": "255/40R21 미쉐린 타이어 & 휠",
+    "price": 1200000,
+    "trims": [
+     "t7",
+     "t8"
+    ],
+    "desc": "21인치 휠 (3.5 터보)"
+   },
+   {
+    "name": "255/40R21 스포츠 전용 휠",
+    "price": 3650000,
+    "trims": [
+     "t3",
+     "t4",
+     "t9",
+     "t10"
+    ],
+    "desc": "21인치 스포츠 휠 + 서스펜션 + e-LSD"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 450000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "사이드 스텝 (액세서리)",
+    "price": 470000,
+    "trims": null,
+    "desc": "사이드 스텝"
+   },
+   {
+    "name": "프로텍션 매트 패키지 (액세서리)",
+    "price": 250000,
+    "trims": null,
+    "desc": "1/2열 + 러기지 매트"
+   },
+   {
+    "name": "빌트인 공기청정기 (액세서리)",
+    "price": 450000,
+    "trims": null,
+    "desc": "빌트인 공기청정기"
+   },
+   {
+    "name": "21인치 단조 휠 (액세서리)",
+    "price": 2800000,
+    "trims": null,
+    "desc": "21인치 단조 휠"
+   }
+  ]
+ },
+ {
+  "id": "gv70-ev",
+  "name": "GV70 전동화",
+  "brand": "제네시스",
+  "category": "전기차",
+  "year": "2027년형",
+  "taxNote": "세제혜택 후 가격(개별소비세 실효세율 조정 기준, 2026.07~), 보조금 미반영. 1,000원 단위 반올림",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11740",
+  "sourceDate": "2026-07-01",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "AWD 19인치",
+    "powertrain": "전기 AWD (84.0kWh)",
+    "price": 75798000
+   },
+   {
+    "id": "t2",
+    "name": "AWD 20인치",
+    "powertrain": "전기 AWD (84.0kWh)",
+    "price": 76559000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마우나 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "어반 브라운/프로즌 그레이 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "아이시 블루/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "오션웨이브 블루/하바나 브라운 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "시그니처 디자인 셀렉션 I",
+    "price": 1900000,
+    "trims": null,
+    "desc": "퀼팅 프라임 나파가죽, 카빙 알루미늄 가니시"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II",
+    "price": 2300000,
+    "trims": null,
+    "desc": "셀렉션 I 구성 + 은하수 패턴 무드램프 가니시"
+   },
+   {
+    "name": "파퓰러 패키지 I",
+    "price": 2950000,
+    "trims": null,
+    "desc": "HUD + 드라이빙 어시스턴스 I"
+   },
+   {
+    "name": "파퓰러 패키지 II",
+    "price": 6600000,
+    "trims": null,
+    "desc": "파퓰러 I + DA II + 2열 컴포트 + 빌트인 캠"
+   },
+   {
+    "name": "프레스티지 패키지",
+    "price": 11600000,
+    "trims": null,
+    "desc": "파퓰러 II + 파노라마 선루프 + 컨비니언스 + B&O"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": null,
+    "desc": "HUD"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 I",
+    "price": 1950000,
+    "trims": null,
+    "desc": "서라운드뷰, 후측방 모니터, 원격주차 보조 2"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지 II",
+    "price": 2000000,
+    "trims": null,
+    "desc": "HDA 2, 내비 기반 크루즈, 지능형 헤드램프"
+   },
+   {
+    "name": "2열 컴포트 패키지",
+    "price": 1000000,
+    "trims": null,
+    "desc": "수동 커튼, 3존 공조, 뒷좌석 통풍"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "컨비니언스 패키지",
+    "price": 2200000,
+    "trims": null,
+    "desc": "동승석 에르고 시트, 메모리, 무드 큐레이터, 디지털 미러"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1700000,
+    "trims": null,
+    "desc": "B&O 15스피커, ANC-R"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 450000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "플로팅 휠캡 (액세서리)",
+    "price": 90000,
+    "trims": null,
+    "desc": "플로팅 휠캡"
+   },
+   {
+    "name": "사이드 스텝 (액세서리)",
+    "price": 470000,
+    "trims": null,
+    "desc": "사이드 스텝"
+   },
+   {
+    "name": "프로텍션 매트 패키지 (액세서리)",
+    "price": 250000,
+    "trims": null,
+    "desc": "1/2열 + 러기지 매트"
+   }
+  ]
+ },
+ {
+  "id": "gv80",
+  "name": "GV80",
+  "brand": "제네시스",
+  "category": "SUV",
+  "year": "2027년형",
+  "taxNote": "개별소비세 5% 기준 (5인승 기준가, 6/7인승은 선택 품목으로 반영)",
+  "source": "https://chazm.co.kr/hub/gv80-guide",
+  "sourceDate": "2026-10-06",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보 2WD",
+    "powertrain": "가솔린 2.5 터보 2WD",
+    "price": 69850000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보 AWD",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 73550000
+   },
+   {
+    "id": "t3",
+    "name": "3.5 터보 AWD",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 79050000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 BLACK AWD",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 95900000
+   },
+   {
+    "id": "t5",
+    "name": "3.5 터보 BLACK AWD",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 100100000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베링 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마우나 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바로사 버건디",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바로사 버건디 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스모키 그린/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스모키 그린/어스 브라운 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "슬레이트 그레이/보르도 브라운 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "울트라마린 블루/글레이셔 화이트 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "7인승",
+    "price": 1000000,
+    "trims": null,
+    "desc": "3열 시트 (7인승)"
+   },
+   {
+    "name": "6인승",
+    "price": 2500000,
+    "trims": null,
+    "desc": "2열 독립 시트 (6인승)"
+   },
+   {
+    "name": "천연 가죽 패키지",
+    "price": 1350000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "천연가죽 시트"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 I",
+    "price": 2850000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "투톤 퀼팅 시트, 알루미늄 내장재"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II",
+    "price": 4350000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "나파가죽, 리얼 우드, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "파퓰러 패키지",
+    "price": 4100000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "HUD + 드라이빙 어시스턴스 패키지"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지",
+    "price": 2950000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "차로변경 보조, 원격 자동주차, 지능형 헤드램프"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지",
+    "price": 2900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "2열 전동·통풍, 전동 커튼, 3존+ 공조"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "B&O 18스피커, ANC-R"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   }
+  ]
+ },
+ {
+  "id": "gv80-hev",
+  "name": "GV80 하이브리드",
+  "brand": "제네시스",
+  "category": "SUV",
+  "year": "2027년형",
+  "taxNote": "개별소비세 5% 기준 (5인승 기준가, 6/7인승은 선택 품목으로 반영)",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11906",
+  "sourceDate": "2026-10-06",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보 하이브리드 2WD",
+    "powertrain": "하이브리드 2.5 터보 2WD",
+    "price": 76800000
+   },
+   {
+    "id": "t2",
+    "name": "2.5 터보 하이브리드 AWD",
+    "powertrain": "하이브리드 2.5 터보 AWD",
+    "price": 80500000
+   },
+   {
+    "id": "t3",
+    "name": "2.5 터보 하이브리드 BLACK AWD",
+    "powertrain": "하이브리드 2.5 터보 AWD",
+    "price": 103250000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베링 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세이셸 베이지",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카디프 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "브런즈윅 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "울트라마린 블루/트래버틴 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "울트라마린 블루/바하 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "슬레이트 그레이/새들 브라운 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/타이가 그린 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "7인승",
+    "price": 1000000,
+    "trims": null,
+    "desc": "3열 시트 (7인승)"
+   },
+   {
+    "name": "6인승",
+    "price": 2500000,
+    "trims": null,
+    "desc": "2열 독립 시트 (6인승)"
+   },
+   {
+    "name": "천연 가죽 패키지",
+    "price": 1350000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "천연가죽 시트"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 I",
+    "price": 2850000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "투톤 퀼팅 시트, 알루미늄 내장재"
+   },
+   {
+    "name": "시그니처 디자인 셀렉션 II",
+    "price": 4350000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "나파가죽, 리얼 우드, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "파퓰러 패키지",
+    "price": 4100000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "HUD + 드라이빙 어시스턴스 패키지"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "HUD"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지",
+    "price": 2950000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "충돌방지 2, HDA 2, 원격주차 2, 지능형 헤드램프"
+   },
+   {
+    "name": "하이테크 패키지",
+    "price": 2100000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "고스트 도어, 디지털 미러, 무드 큐레이터, 실내 V2L"
+   },
+   {
+    "name": "앞좌석 컴포트 패키지",
+    "price": 1600000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "에르고 모션 18way, 동승석 메모리"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지",
+    "price": 2500000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "2열 전동·통풍, 전동 커튼, 3존+ 공조"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1900000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "B&O 18스피커, ANC-R"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비"
+   },
+   {
+    "name": "265/50R20 휠 패키지",
+    "price": 1300000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "20인치 미쉐린, 실버 캘리퍼"
+   },
+   {
+    "name": "265/40R22 휠 패키지",
+    "price": 2500000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "22인치 미쉐린, 다크 그레이 휠"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "후석 스마트 엔터테인먼트 (액세서리)",
+    "price": 3000000,
+    "trims": null,
+    "desc": "14.6인치 듀얼 후석 모니터"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 500000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "트레일러 히치 (액세서리)",
+    "price": 1550000,
+    "trims": null,
+    "desc": "트레일러 히치"
+   },
+   {
+    "name": "고정식 사이드 스텝 (액세서리)",
+    "price": 490000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "고정식 사이드 스텝"
+   },
+   {
+    "name": "고정식 사이드 스텝 블랙 전용 (액세서리)",
+    "price": 540000,
+    "trims": [
+     "t3"
+    ],
+    "desc": "고정식 사이드 스텝"
+   },
+   {
+    "name": "2열 냉온장 컵홀더 (6인승, 액세서리)",
+    "price": 800000,
+    "trims": null,
+    "desc": "6인승 전용"
+   },
+   {
+    "name": "프로텍션 매트 패키지 (액세서리)",
+    "price": 200000,
+    "trims": null,
+    "desc": "1/2열 매트"
+   }
+  ]
+ },
+ {
+  "id": "gv80-coupe",
+  "name": "GV80 쿠페",
+  "brand": "제네시스",
+  "category": "SUV",
+  "year": "2027년형",
+  "taxNote": "개별소비세 5% 기준",
+  "source": "https://www.cardong.co.kr/newcar/vehicle/11594",
+  "sourceDate": "2026-10-06",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "2.5 터보",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 82700000
+   },
+   {
+    "id": "t2",
+    "name": "3.5 터보",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 86900000
+   },
+   {
+    "id": "t3",
+    "name": "3.5 터보 48V 일렉트릭 슈퍼차저",
+    "powertrain": "가솔린 3.5 터보 48V eS AWD",
+    "price": 93250000
+   },
+   {
+    "id": "t4",
+    "name": "2.5 터보 BLACK",
+    "powertrain": "가솔린 2.5 터보 AWD",
+    "price": 101000000
+   },
+   {
+    "id": "t5",
+    "name": "3.5 터보 BLACK",
+    "powertrain": "가솔린 3.5 터보 AWD",
+    "price": 105200000
+   },
+   {
+    "id": "t6",
+    "name": "3.5 터보 48V 일렉트릭 슈퍼차저 BLACK",
+    "powertrain": "가솔린 3.5 터보 48V eS AWD",
+    "price": 110350000
+   }
+  ],
+  "exterior": [
+   {
+    "name": "우유니 화이트",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세빌 실버",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "비크 블랙",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카프리 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "베링 블루",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "트롬소 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세이셸 베이지",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "카디프 그린",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마우나 레드",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바로사 버건디",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마칼루 그레이 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "마테호른 화이트 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "브런즈윅 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스토르 그린 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "바로사 버건디 (무광)",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "세레스 블루 (무광)",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "interior": [
+   {
+    "name": "옵시디언 블랙 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "스모키 그린/바닐라 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "울트라마린 블루 모노톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "울트라마린 블루/바하 베이지 투톤",
+    "price": 0,
+    "trims": null
+   },
+   {
+    "name": "옵시디언 블랙/세비야 레드 투톤",
+    "price": 0,
+    "trims": null
+   }
+  ],
+  "options": [
+   {
+    "name": "쿠페 디자인 셀렉션 II",
+    "price": 1500000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "프리미엄 나파, 리얼 우드/카본, 스웨이드 헤드라이닝"
+   },
+   {
+    "name": "파퓰러 패키지",
+    "price": 4735000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "HUD + 드라이빙 어시스턴스 패키지"
+   },
+   {
+    "name": "헤드업 디스플레이",
+    "price": 1300000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "HUD"
+   },
+   {
+    "name": "하이테크 패키지",
+    "price": 1300000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "고스트 도어 클로징, 디지털 센터 미러"
+   },
+   {
+    "name": "앞좌석 컴포트 패키지",
+    "price": 1600000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "에르고 모션 18way, 동승석 메모리"
+   },
+   {
+    "name": "드라이빙 어시스턴스 패키지",
+    "price": 3650000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "충돌방지, 주차 보조, HDA 2, e-LSD(48V 제외)"
+   },
+   {
+    "name": "뒷좌석 컴포트 패키지",
+    "price": 2200000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "뒷좌석 전동·통풍, 3존+ 공조, 220V"
+   },
+   {
+    "name": "뱅앤올룹슨 사운드 패키지",
+    "price": 1900000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "B&O 18스피커, ANC-R"
+   },
+   {
+    "name": "빌트인 캠 패키지",
+    "price": 850000,
+    "trims": null,
+    "desc": "빌트인 캠 2, 보조배터리, AR 내비"
+   },
+   {
+    "name": "265/40R22 타이어 + 블랙 캘리퍼 + 휠",
+    "price": 1200000,
+    "trims": [
+     "t1",
+     "t2"
+    ],
+    "desc": "22인치 휠 패키지"
+   },
+   {
+    "name": "파노라마 선루프",
+    "price": 1400000,
+    "trims": null,
+    "desc": "파노라마 선루프"
+   },
+   {
+    "name": "후석 스마트 엔터테인먼트 (액세서리)",
+    "price": 3000000,
+    "trims": null,
+    "desc": "14.6인치 듀얼 후석 모니터"
+   },
+   {
+    "name": "고정식 사이드 스텝 (액세서리)",
+    "price": 490000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "고정식 사이드 스텝"
+   },
+   {
+    "name": "고정식 사이드 스텝 블랙 전용 (액세서리)",
+    "price": 540000,
+    "trims": [
+     "t4",
+     "t5",
+     "t6"
+    ],
+    "desc": "고정식 사이드 스텝"
+   },
+   {
+    "name": "전동식 사이드 스텝 (액세서리)",
+    "price": 2450000,
+    "trims": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "desc": "전동식 사이드 스텝"
+   },
+   {
+    "name": "전동식 사이드 스텝 블랙 전용 (액세서리)",
+    "price": 2550000,
+    "trims": [
+     "t4",
+     "t5",
+     "t6"
+    ],
+    "desc": "전동식 사이드 스텝"
+   },
+   {
+    "name": "차량 보호 필름 (액세서리)",
+    "price": 500000,
+    "trims": null,
+    "desc": "보호 필름"
+   },
+   {
+    "name": "프로텍션 매트 패키지 1/2열 (액세서리)",
+    "price": 200000,
+    "trims": null,
+    "desc": "1/2열 매트"
+   }
+  ]
+ },
+ {
+  "id": "gv90",
+  "name": "GV90",
+  "brand": "제네시스",
+  "category": "전기차",
+  "year": "2027년형",
+  "taxNote": "GV90: 개별소비세 5% + 친환경차 세제혜택 반영, 보조금 미반영 / 네오룬: 개별소비세 5% 기준(세제혜택 미반영)",
+  "source": "https://www.mt.co.kr/article/2026111010240539729",
+  "sourceDate": "2026-11-10",
+  "trims": [
+   {
+    "id": "t1",
+    "name": "GV90 스탠다드 (7인승)",
+    "powertrain": "전기 AWD (123.5kWh)",
+    "price": 139500000
+   },
+   {
+    "id": "t2",
+    "name": "GV90 인디비쥬얼 라운지 시트 (6인승)",
+    "powertrain": "전기 AWD (123.5kWh)",
+    "price": 145500000
+   },
+   {
+    "id": "t3",
+    "name": "GV90 네오룬 스탠다드 (6인승)",
+    "powertrain": "전기 AWD (123.5kWh)",
+    "price": 189900000
+   },
+   {
+    "id": "t4",
+    "name": "GV90 네오룬 이그제큐티브 스위트 (4인승)",
+    "powertrain": "전기 AWD (123.5kWh)",
+    "price": 239500000
+   },
+   {
+    "id": "t5",
+    "name": "GV90 네오룬 퍼스트 에디션 (한정 222대)",
+    "powertrain": "전기 AWD (123.5kWh)",
+    "price": 270000000
+   }
+  ],
+  "exterior": [],
+  "interior": [],
+  "options": []
  }
 ];
