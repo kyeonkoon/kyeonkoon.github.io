@@ -223,7 +223,7 @@
       </div>
       <div class="act">
         <a class="btn btn-primary" id="smsBtn" href="sms:010-9294-9094"><i class="fa-solid fa-comment-sms"></i>이 견적으로 문자 상담</a>
-        <button class="btn btn-kakao" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i>견적 복사 (카톡에 붙여넣기)</button>
+        <button class="btn btn-kakao" id="copyBtn" type="button"><i class="fa-solid fa-comment"></i>견적 복사 + 카카오톡 상담</button>
         <a class="btn btn-line" href="tel:010-9294-9094"><i class="fa-solid fa-phone"></i>010-9294-9094 전화 상담</a>
       </div>
       <p class="note" id="sNote"></p>
@@ -246,6 +246,7 @@
 <script>
 (function(){
   var PHONE = "010-9294-9094";
+  var KAKAO = "https://open.kakao.com/o/smyzbSWi";
   var CARS = window.CARS || [];
   var CATS = ["전체","경차","세단","SUV","전기차","수소차"];
   var MONTHS = [12,24,36,48,60,72];
@@ -519,11 +520,13 @@
   $("plans").addEventListener("click", function(e){ var b=e.target.closest(".plan"); if(!b||b.disabled) return; st.plan=b.dataset.p; renderPlans(); renderSummary(); });
   $("mSms").addEventListener("click", function(e){ if(!st.trim){ e.preventDefault(); $("models").scrollIntoView({behavior:"smooth"}); toast("차종과 트림을 먼저 골라주세요"); } });
   $("copyBtn").addEventListener("click", function(){
-    if(!st.trim){ toast("차종과 트림을 먼저 골라주세요"); return; }
-    var text = quoteText(calc());
-    var done = function(){ toast("견적이 복사되었습니다. 카톡이나 문자에 붙여넣어 보내주세요."); };
-    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
-    else { fallbackCopy(text); done(); }
+    if(st.trim){
+      var text = quoteText(calc());
+      fallbackCopy(text);
+      if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).catch(function(){}); }
+      toast("견적이 복사되었습니다. 카카오톡 채팅방에 붙여넣어 보내주세요.");
+    }
+    window.open(KAKAO, "_blank", "noopener");
   });
   function fallbackCopy(text){ var ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(e){} document.body.removeChild(ta); }
   var tt; function toast(msg){ var el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){el.classList.remove("show");},2200); }
