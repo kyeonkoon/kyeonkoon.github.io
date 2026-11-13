@@ -99,6 +99,20 @@
   .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
   .toast.show{opacity:1}
 
+  .tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 7px;border-radius:999px;margin-right:6px;vertical-align:1px}
+  .tag.base{background:#e6f6ec;color:#12863f}.tag.cond{background:#fff4e0;color:#b26a00}
+  .pick .p.minus{color:#d6336c}
+  .plans{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .plan{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 14px;font-weight:800;font-size:14px;cursor:pointer;text-align:left}
+  .plan small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+  .plan.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+  .plan.on small{color:var(--accent)}
+  .planinfo{background:var(--paper-2);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--ink-2);margin-bottom:12px}
+  .planinfo:empty{display:none}
+  .planinfo b{color:var(--ink)}
+  .warn{color:#d6336c;font-size:13px;font-weight:700;margin-top:8px}
+  .warn:empty{display:none}
+  .field input:disabled{background:var(--paper-2);color:var(--muted)}
   .mbar{display:none}
   footer{padding:20px 0 40px;color:var(--muted);font-size:13px;text-align:center}
 
@@ -158,12 +172,22 @@
     </div>
 
     <div class="box">
-      <h2><span class="n">5</span>할부 조건</h2>
-      <div class="fields">
+      <h2><span class="n">5</span>이달의 할인 <small id="promoMonth"></small></h2>
+      <div class="list" id="discounts"><p class="empty">트림을 선택하면 이달 받을 수 있는 할인이 나옵니다.</p></div>
+      <div class="fields" style="margin-top:12px">
         <div class="field">
-          <label for="discount">할인 금액 (원)</label>
+          <label for="discount">기타 할인 (직접 입력, 원)</label>
           <input id="discount" inputmode="numeric" placeholder="0">
         </div>
+      </div>
+      <p class="hint" id="promoNote" style="margin-top:10px"></p>
+    </div>
+
+    <div class="box">
+      <h2><span class="n">6</span>할부 조건</h2>
+      <div class="plans" id="plans"></div>
+      <div class="planinfo" id="planInfo"></div>
+      <div class="fields">
         <div class="field">
           <label for="down">선수금 (원)</label>
           <input id="down" inputmode="numeric" placeholder="0">
@@ -176,7 +200,12 @@
           <label for="rate">연 금리 (%)</label>
           <input id="rate" inputmode="decimal" value="5.5">
         </div>
+        <div class="field" id="deferField" style="display:none">
+          <label for="defer">유예율 (%, 최대 70)</label>
+          <input id="defer" inputmode="numeric" value="70">
+        </div>
       </div>
+      <p class="warn" id="planWarn"></p>
       <p class="hint" style="margin-top:10px">금리는 이달 프로모션과 신용도에 따라 달라집니다. 정확한 금리는 상담 때 안내해 드립니다. (계산 방식: 원리금균등)</p>
     </div>
   </div>
@@ -213,6 +242,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="cars-data.js"></script>
+<script src="promo-data.js"></script>
 <script>
 (function(){
   var PHONE = "010-9294-9094";
@@ -220,7 +250,9 @@
   var CATS = ["전체","경차","세단","SUV","전기차","수소차"];
   var MONTHS = [12,24,36,48,60,72];
   var BRANDS = ["현대","제네시스"];
-  var st = { brand:"현대", cat:"전체", car:null, trim:null, ext:null, int:null, opts:{}, months:60 };
+  var PROMOS = window.PROMOS || {};
+  var st = { brand:"현대", cat:"전체", car:null, trim:null, ext:null, int:null, opts:{}, months:60, disc:{}, plan:"normal", userRate:"5.5" };
+  var promoOf = function(m){ return (m && PROMOS[m.id]) || {discounts:[]}; };
   var $ = function(id){ return document.getElementById(id); };
   var won = function(n){ return Math.round(n).toLocaleString("ko-KR") + "원"; };
   var man = function(n){ return (Math.round(n/10000)).toLocaleString("ko-KR") + "만원"; };
@@ -276,8 +308,49 @@
       return '<label class="pick'+(on?' on':'')+'"><input type="checkbox" value="'+x.i+'"'+(on?' checked':'')+'><span class="t"><b>'+esc(x.o.name)+'</b>'+(x.o.desc&&x.o.desc!==x.o.name?'<small>'+esc(x.o.desc)+'</small>':'')+'</span><span class="p">+'+won(x.o.price)+'</span></label>';
     }).join("") : '<p class="empty">이 트림은 가격표에 별도 선택 옵션이 없습니다.</p>';
   }
+  function planMonths(){
+    var p = promoOf(st.car);
+    if(st.plan==="free" && p.finance) return p.finance.months;
+    if(st.plan==="fm" && p.firstMove) return [p.firstMove.months];
+    return MONTHS;
+  }
+  function discAmount(d){ return d.percent ? Math.round((st.trim?st.trim.price:0)*d.percent/100) : (d.amount||0); }
+  function renderDiscounts(){
+    var m = st.car;
+    $("promoMonth").textContent = window.PROMO_MONTH ? window.PROMO_MONTH+" 기준" : "";
+    if(!m || !st.trim){ $("discounts").innerHTML = '<p class="empty">트림을 선택하면 이달 받을 수 있는 할인이 나옵니다.</p>'; $("promoNote").textContent=""; return; }
+    var items = promoOf(m).discounts.map(function(d,i){ return {d:d,i:i}; }).filter(function(x){ return allowed(x.d); });
+    $("discounts").innerHTML = items.length ? items.map(function(x){
+      var on = !!st.disc[x.i], d = x.d;
+      var tag = d.type==="기본" ? '<span class="tag base">기본</span>' : '<span class="tag cond">조건부</span>';
+      var amt = d.percent ? '-최대 '+won(discAmount(d))+' ('+d.percent+'%)' : '-'+won(discAmount(d));
+      return '<label class="pick'+(on?' on':'')+'"><input type="checkbox" value="'+x.i+'"'+(on?' checked':'')+'><span class="t"><b>'+tag+esc(d.name)+'</b>'+(d.cond?'<small>'+esc(d.cond)+'</small>':'')+'</span><span class="p minus">'+amt+'</span></label>';
+    }).join("") : '<p class="empty">이달 이 차종에 확인된 할인이 없습니다. 상담 때 재고·전시차 할인을 확인해 드립니다.</p>';
+    var note = "조건부 할인은 해당되는 경우에만 체크하세요. 같은 종류(트레이드-인, 생산월)는 하나만 적용됩니다. ";
+    note += (window.PROMO_NOTES && window.PROMO_NOTES[brandOf(m)]) || "";
+    $("promoNote").textContent = note;
+  }
+  function renderPlans(){
+    var m = st.car, p = promoOf(m);
+    var list = [{k:"normal", t:"일반 할부", s:"금리 직접 입력"}];
+    if(m && p.finance) list.push({k:"free", t:p.finance.name, s:"이달 프로모션 · "+p.finance.months.join("/")+"개월"});
+    if(m && p.firstMove && st.trim && p.firstMove.trims.indexOf(st.trim.id)>-1) list.push({k:"fm", t:p.firstMove.name, s:p.firstMove.months+"개월 · 연 "+p.firstMove.rate+"%"});
+    else if(m && p.firstMove) list.push({k:"fm", t:p.firstMove.name, s:"모던·프리미엄 트림만", off:true});
+    if(!list.some(function(x){return x.k===st.plan && !x.off;})) st.plan = "normal";
+    $("plans").innerHTML = list.map(function(x){ return '<button type="button" class="plan'+(st.plan===x.k?' on':'')+'" data-p="'+x.k+'"'+(x.off?' disabled style="opacity:.45;cursor:not-allowed"':'')+'>'+esc(x.t)+'<small>'+esc(x.s)+'</small></button>'; }).join("");
+    var info = "";
+    if(st.plan==="free") info = "<b>"+esc(p.finance.name)+"</b> · 연 0% · "+esc(p.finance.cond);
+    if(st.plan==="fm"){ var f=p.firstMove; info = "<b>"+esc(f.name)+"</b> · 차량가의 최대 "+f.deferMax+"%를 만기까지 미뤄 월 납입금을 낮추는 할부입니다. 매달 '유예금을 뺀 원리금 + 유예금 이자'만 내고, "+esc(f.end)+"합니다. 선수금 "+f.downMin+"% 이상 · "+esc(f.cond)+'. <a href="'+esc(f.source)+'" target="_blank" rel="noopener" style="text-decoration:underline">현대차 안내</a>'; }
+    $("planInfo").innerHTML = info;
+    var rate = $("rate");
+    if(st.plan==="normal"){ rate.disabled=false; if(rate.dataset.locked){ rate.value = st.userRate; delete rate.dataset.locked; } }
+    else { if(!rate.dataset.locked) st.userRate = rate.value; rate.dataset.locked="1"; rate.disabled=true; rate.value = st.plan==="free" ? "0" : String(p.firstMove.rate); }
+    $("deferField").style.display = st.plan==="fm" ? "" : "none";
+    var ms = planMonths(); if(ms.indexOf(st.months)<0) st.months = ms[ms.length-1];
+    renderMonths();
+  }
   function renderMonths(){
-    $("months").innerHTML = MONTHS.map(function(n){ return '<button type="button" class="'+(st.months===n?'on':'')+'" data-m="'+n+'">'+n+'개월</button>'; }).join("");
+    $("months").innerHTML = planMonths().map(function(n){ return '<button type="button" class="'+(st.months===n?'on':'')+'" data-m="'+n+'">'+n+'개월</button>'; }).join("");
   }
   function pickedColor(list, name){ for(var i=0;i<list.length;i++) if(list[i].name===name && allowed(list[i])) return list[i]; return null; }
 
@@ -290,14 +363,26 @@
     res.int = pickedColor(m.interior, st.int);
     m.options.forEach(function(o,i){ if(st.opts[i] && allowed(o)) res.opts.push(o); });
     res.total = res.base + (res.ext?res.ext.price:0) + (res.int?res.int.price:0) + res.opts.reduce(function(s,o){return s+o.price;},0);
-    var discount = Math.min(num($("discount")), res.total);
+    res.discs = [];
+    promoOf(m).discounts.forEach(function(d,i){ if(st.disc[i] && allowed(d)) res.discs.push({name:d.name, amount:discAmount(d)}); });
+    res.manual = num($("discount"));
+    var discount = Math.min(res.discs.reduce(function(s,d){return s+d.amount;},0) + res.manual, res.total);
     res.discount = discount;
     res.pay = res.total - discount;
     res.down = Math.min(num($("down")), res.pay);
     res.loan = res.pay - res.down;
     var r = num($("rate"))/100/12, n = st.months;
-    res.monthly = res.loan<=0 ? 0 : (r===0 ? res.loan/n : res.loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1));
-    res.interest = res.monthly*n - res.loan;
+    var amort = function(P){ return P<=0 ? 0 : (r===0 ? P/n : P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); };
+    res.balloon = 0;
+    if(st.plan==="fm"){
+      var f = promoOf(m).firstMove, pct = Math.min(Math.max(num($("defer")),0), f.deferMax);
+      res.deferPct = pct;
+      res.balloon = Math.min(Math.round(pct/100*(res.total + (f.hybridAdd||0))), Math.max(res.loan,0));
+      res.monthly = amort(res.loan - res.balloon) + res.balloon*r;
+    } else {
+      res.monthly = amort(res.loan);
+    }
+    res.interest = res.monthly*n - (res.loan - res.balloon);
     return res;
   }
 
@@ -308,8 +393,11 @@
     if(c.int) L.push("내장: "+c.int.name+(c.int.price?" (+"+won(c.int.price)+")":""));
     if(c.opts.length) L.push("옵션: "+c.opts.map(function(o){return o.name;}).join(", "));
     L.push("차량 가격: "+won(c.total));
-    if(c.discount) L.push("할인: -"+won(c.discount));
-    L.push("할부: 선수금 "+won(c.down)+" / "+st.months+"개월 / 연 "+num($("rate"))+"% → 월 약 "+won(c.monthly));
+    c.discs.forEach(function(d){ L.push("할인: "+d.name+" -"+won(d.amount)); });
+    if(c.manual) L.push("기타 할인: -"+won(c.manual));
+    if(c.discount) L.push("할인 후 가격: "+won(c.pay));
+    var pn = st.plan==="fm" ? "퍼스트 무브 플랜(유예 "+c.deferPct+"%, 만기 유예금 "+won(c.balloon)+")" : (st.plan==="free" ? "무이자 할부" : "일반 할부");
+    L.push(pn+": 선수금 "+won(c.down)+" / "+st.months+"개월 / 연 "+num($("rate"))+"% → 월 약 "+won(c.monthly));
     L.push("이 조건으로 정확한 견적 부탁드립니다.");
     return L.join("\n");
   }
@@ -325,18 +413,25 @@
       if(c.ext && c.ext.price) rows += '<div class="row"><span>외장 '+esc(c.ext.name)+'</span><b>+'+won(c.ext.price)+'</b></div>';
       if(c.int && c.int.price) rows += '<div class="row"><span>내장 '+esc(c.int.name)+'</span><b>+'+won(c.int.price)+'</b></div>';
       c.opts.forEach(function(o){ rows += '<div class="row sub"><span>'+esc(o.name)+'</span><span>+'+won(o.price)+'</span></div>'; });
-      if(c.discount) rows += '<div class="row"><span>할인</span><b style="color:#d6336c">-'+won(c.discount)+'</b></div>';
+      c.discs.forEach(function(d){ rows += '<div class="row"><span>'+esc(d.name)+'</span><b style="color:#d6336c">-'+won(d.amount)+'</b></div>'; });
+      if(c.manual) rows += '<div class="row"><span>기타 할인</span><b style="color:#d6336c">-'+won(Math.min(c.manual,c.total))+'</b></div>';
     }
     $("sRows").innerHTML = rows;
     $("sRows").style.display = rows ? "" : "none";
     $("sTotal").textContent = won(c.discount ? c.pay : c.total);
+    $("sTotal").previousElementSibling.textContent = c.discount ? "할인 후 가격" : "차량 가격";
     $("sMonthsLabel").textContent = "월 할부금 ("+st.months+"개월)";
     $("sMonthly").textContent = won(c.monthly);
-    $("sLoan").textContent = t ? ("할부원금 "+won(c.loan)+" · 총 이자 약 "+won(Math.max(0,c.interest))) : "";
+    $("sLoan").textContent = t ? ("할부원금 "+won(c.loan)+" · 총 이자 약 "+won(Math.max(0,c.interest))+(c.balloon ? " · 만기 유예금 "+won(c.balloon)+" (차량 반납 시 정산)" : "")) : "";
+    $("sMonthsLabel").textContent = (st.plan==="fm" ? "퍼스트 무브 월 납입금" : (st.plan==="free" ? "무이자 월 할부금" : "월 할부금"))+" ("+st.months+"개월)";
+    var warn = "", p = promoOf(m);
+    if(t && st.plan==="fm" && c.down < c.pay*p.firstMove.downMin/100) warn = "퍼스트 무브 플랜은 선수금이 차량가의 "+p.firstMove.downMin+"% 이상("+won(Math.ceil(c.pay*p.firstMove.downMin/100))+")이어야 합니다.";
+    if(t && st.plan==="free" && c.down < c.pay*0.2) warn = "무이자 할부는 선수금 20% 이상("+won(Math.ceil(c.pay*0.2))+")이 필요합니다.";
+    $("planWarn").textContent = warn;
     var note = "";
     if(m){
       note = "※ "+esc(m.year||"")+" 가격표 기준("+esc(m.taxNote||"")+"). 가격 정리일 "+(window.PRICE_UPDATED||"")+". "+
-        "탁송료·취득세·공채·보험료는 포함되지 않았습니다. 실제 계약 금액은 출고 시점 가격과 프로모션에 따라 달라질 수 있습니다.";
+        "할인·할부 조건은 "+(window.PROMO_MONTH||"")+" 기준이며 재고·생산월에 따라 달라질 수 있습니다. 탁송료·취득세·공채·보험료는 포함되지 않았습니다. 실제 계약 금액은 출고 시점 가격과 프로모션에 따라 달라질 수 있습니다.";
       if(m.source){ var u = String(m.source).split(/\s*;\s*/)[0]; if(/^https?:/.test(u)) note += ' <a href="'+esc(u)+'" target="_blank" rel="noopener">가격 출처</a>'; }
     } else {
       note = "※ 참고용 예상 견적입니다. 탁송료·취득세·보험료는 별도이며, 정확한 금액은 상담 때 안내해 드립니다.";
@@ -358,6 +453,9 @@
     if(o.length) p.push("opt="+o.join("."));
     if(st.ext) p.push("ext="+encodeURIComponent(st.ext));
     if(st.int) p.push("int="+encodeURIComponent(st.int));
+    var d = Object.keys(st.disc).filter(function(k){return st.disc[k];});
+    p.push("d="+(d.length?d.join("."):"-"));
+    if(st.plan!=="normal") p.push("p="+st.plan);
     p.push("m="+st.months);
     try{ history.replaceState(null,"","#"+p.join("&")); }catch(e){}
   }
@@ -368,12 +466,19 @@
     st.trim = m.trims.filter(function(t){return t.id===h.trim;})[0] || null;
     if(h.opt) h.opt.split(".").forEach(function(i){ st.opts[i]=true; });
     st.ext = h.ext || null; st.int = h["int"] || null;
+    if(h.d!==undefined){ if(h.d!=="-") h.d.split(".").forEach(function(i){ st.disc[i]=true; }); } else defaultDiscs();
+    if(h.p) st.plan = h.p;
     if(MONTHS.indexOf(+h.m)>-1) st.months = +h.m;
   }
 
+  function defaultDiscs(){
+    st.disc = {};
+    promoOf(st.car).discounts.forEach(function(d,i){ if(d.type==="기본") st.disc[i] = true; });
+  }
   function selectCar(id){
-    st.car = findCar(id); st.trim = null; st.ext = null; st.int = null; st.opts = {};
-    renderModels(); renderTrims(); renderColors(); renderOptions(); renderSummary();
+    st.car = findCar(id); st.trim = null; st.ext = null; st.int = null; st.opts = {}; st.plan = "normal";
+    defaultDiscs();
+    renderModels(); renderTrims(); renderColors(); renderOptions(); renderDiscounts(); renderPlans(); renderSummary();
   }
   function selectTrim(id){
     st.trim = st.car.trims.filter(function(t){return t.id===id;})[0];
@@ -384,7 +489,7 @@
     var ex = st.car.exterior.filter(allowed), it = st.car.interior.filter(allowed);
     if(!st.ext && ex.length) st.ext = ex[0].name;
     if(!st.int && it.length) st.int = it[0].name;
-    renderTrims(); renderColors(); renderOptions(); renderSummary();
+    renderTrims(); renderColors(); renderOptions(); renderDiscounts(); renderPlans(); renderSummary();
   }
 
   // 이벤트
@@ -400,6 +505,18 @@
     $(id).addEventListener("input", function(){ var v=$(id).value.replace(/[^0-9]/g,""); $(id).value = v ? (+v).toLocaleString("ko-KR") : ""; renderSummary(); });
   });
   $("rate").addEventListener("input", renderSummary);
+  $("defer").addEventListener("input", renderSummary);
+  $("discounts").addEventListener("change", function(e){
+    if(e.target.type!=="checkbox") return;
+    var i = e.target.value, list = promoOf(st.car).discounts;
+    if(e.target.checked){
+      var g = list[i].group;
+      if(g) list.forEach(function(d,j){ if(d.group===g && String(j)!==i) delete st.disc[j]; });
+      st.disc[i] = true;
+    } else delete st.disc[i];
+    renderDiscounts(); renderSummary();
+  });
+  $("plans").addEventListener("click", function(e){ var b=e.target.closest(".plan"); if(!b||b.disabled) return; st.plan=b.dataset.p; renderPlans(); renderSummary(); });
   $("mSms").addEventListener("click", function(e){ if(!st.trim){ e.preventDefault(); $("models").scrollIntoView({behavior:"smooth"}); toast("차종과 트림을 먼저 골라주세요"); } });
   $("copyBtn").addEventListener("click", function(){
     if(!st.trim){ toast("차종과 트림을 먼저 골라주세요"); return; }
@@ -412,7 +529,7 @@
   var tt; function toast(msg){ var el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){el.classList.remove("show");},2200); }
 
   loadHash();
-  renderBrands(); renderCats(); renderModels(); renderTrims(); renderColors(); renderOptions(); renderMonths(); renderSummary();
+  renderBrands(); renderCats(); renderModels(); renderTrims(); renderColors(); renderOptions(); renderDiscounts(); renderPlans(); renderSummary();
 })();
 </script>
 </body>
