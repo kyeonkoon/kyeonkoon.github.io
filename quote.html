@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>현대차 견적 계산기 · 트림·옵션·색상·할부 | 견상은 카마스터</title>
+<meta name="description" content="현대자동차 전 차종(캐스퍼·아반떼·쏘나타·그랜저·투싼·싼타페·팰리세이드·아이오닉·넥쏘) 트림, 색상, 옵션을 골라 차량 가격과 월 할부금을 바로 계산해 보세요. 인천 미추홀 현대자동차 견상은 카마스터 010-9294-9094">
+<meta name="keywords" content="현대차 견적, 현대자동차 견적 계산기, 신차 할부 계산기, 팰리세이드 견적, 싼타페 견적, 투싼 견적, 그랜저 견적, 아이오닉 견적, 인천 현대자동차">
+<link rel="canonical" href="https://kyeonkoon.github.io/quote.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="현대차 견적 계산기 | 견상은 카마스터">
+<meta property="og:description" content="트림·색상·옵션 선택하고 월 할부금까지 바로 계산">
+<meta property="og:url" content="https://kyeonkoon.github.io/quote.html">
+<meta property="og:image" content="https://kyeonkoon.github.io/og-image.jpg">
+<meta property="og:locale" content="ko_KR">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+  :root{
+    --ink:#0f1a2b; --ink-2:#3b4656; --muted:#6b7585;
+    --paper:#ffffff; --paper-2:#f4f6f9; --line:#e3e7ee;
+    --accent:#1f5eff; --accent-soft:#e8efff; --warm:#ffb020;
+    --radius:14px; --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);background:var(--paper-2);line-height:1.6;word-break:keep-all}
+  a{color:inherit;text-decoration:none}
+  button,input,select{font:inherit;color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;font-size:18px}.logo span{color:var(--accent)}
+  .nav .cta{background:var(--accent);color:#fff;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px}
+  .head{background:linear-gradient(160deg,#0f1a2b 0%,#1b2f52 100%);color:#fff;padding:40px 0 44px}
+  .head .eyebrow{font-size:13px;font-weight:700;color:var(--warm)}
+  .head h1{font-size:32px;letter-spacing:-.8px;margin:6px 0 8px}
+  .head p{color:#c9d3e3;font-size:15px}
+
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:22px;align-items:start;padding:26px 20px 120px}
+  .box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:16px}
+  .box h2{font-size:18px;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .box h2 .n{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+  .box h2 small{font-weight:500;color:var(--muted);font-size:13px;margin-left:auto}
+  .hint{color:var(--muted);font-size:13px}
+
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;cursor:pointer}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .models{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+  .model{text-align:left;border:1.5px solid var(--line);border-radius:12px;padding:14px;background:#fff;cursor:pointer}
+  .model b{display:block;font-size:15px}
+  .model small{color:var(--muted);font-size:12.5px}
+  .model.on,.pick.on{border-color:var(--accent);background:var(--accent-soft)}
+
+  .list{display:grid;gap:8px}
+  .pick{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;background:#fff}
+  .pick input{accent-color:var(--accent);width:18px;height:18px;flex-shrink:0}
+  .pick .t{flex:1;min-width:0}
+  .pick .t b{display:block;font-size:15px;overflow-wrap:anywhere}
+  .pick .t small{color:var(--muted);font-size:12.5px;display:block}
+  .pick .p{font-weight:700;font-size:14px;white-space:nowrap}
+  .pick.off{opacity:.45;cursor:not-allowed}
+  .grp{font-size:13px;font-weight:700;color:var(--ink-2);margin:6px 0 2px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+  .field input,.field select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;font-size:15px}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+  .seg{display:flex;flex-wrap:wrap;gap:6px}
+  .seg button{flex:1;min-width:52px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:9px 6px;font-weight:700;font-size:14px;cursor:pointer}
+  .seg button.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+
+  .sum{position:sticky;top:76px}
+  .sum .box{padding:20px}
+  .sum h3{font-size:16px;margin-bottom:2px}
+  .sum .car{color:var(--muted);font-size:13px;margin-bottom:14px}
+  .rows{display:grid;gap:7px;font-size:14px;border-top:1px solid var(--line);padding-top:12px}
+  .row{display:flex;justify-content:space-between;gap:12px}
+  .row span{color:var(--ink-2);overflow-wrap:anywhere;min-width:0}
+  .row.sub{font-size:13px;color:var(--muted)}
+  .row.sub span{color:var(--muted);padding-left:10px}
+  .total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
+  .total b{font-size:24px;letter-spacing:-.5px}
+  .monthly{background:var(--ink);color:#fff;border-radius:12px;padding:16px;margin-top:14px}
+  .monthly small{color:#9fb0cc;font-size:13px}
+  .monthly b{display:block;font-size:28px;letter-spacing:-.5px;color:#fff}
+  .monthly .mini{color:#b8c3d6;font-size:12.5px;margin-top:4px}
+  .act{display:grid;gap:8px;margin-top:14px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:12px;font-weight:800;font-size:15px;border:0;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-kakao{background:#fee500;color:#191919}
+  .btn-line{background:#fff;border:1.5px solid var(--line)}
+  .note{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.55}
+  .note a{text-decoration:underline}
+  .empty{color:var(--muted);font-size:14px;padding:6px 0}
+  .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
+  .toast.show{opacity:1}
+
+  .mbar{display:none}
+  footer{padding:20px 0 40px;color:var(--muted);font-size:13px;text-align:center}
+
+  @media (max-width:900px){
+    .layout{grid-template-columns:minmax(0,1fr);padding-bottom:110px}
+    .sum{position:static}
+    .head h1{font-size:26px}
+    .cols,.fields{grid-template-columns:minmax(0,1fr)}
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));align-items:center;gap:12px}
+    .mbar .v{flex:1;min-width:0}
+    .mbar small{display:block;color:var(--muted);font-size:12px}
+    .mbar b{font-size:17px}
+    .mbar a{background:var(--accent);color:#fff;border-radius:12px;padding:12px 16px;font-weight:800;font-size:14px;white-space:nowrap}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="./" class="logo">견상은 <span>카마스터</span></a>
+    <a href="tel:010-9294-9094" class="cta">전화 상담</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <span class="eyebrow">현대자동차 미추홀대리점 · 견상은 카마스터</span>
+    <h1>현대차 견적 직접 계산하기</h1>
+    <p>차종 → 트림 → 색상 → 옵션을 고르고, 할부 조건을 넣으면 월 납입금까지 바로 계산됩니다.<br>마음에 드는 견적은 문자로 보내주시면 이달 프로모션까지 반영해서 정확히 다시 뽑아드립니다.</p>
+  </div>
+</div>
+
+<main class="wrap layout">
+  <div>
+    <div class="box">
+      <h2><span class="n">1</span>차종 선택</h2>
+      <div class="chips" id="cats"></div>
+      <div class="models" id="models"></div>
+    </div>
+
+    <div class="box">
+      <h2><span class="n">2</span>트림 · 파워트레인</h2>
+      <div class="list" id="trims"><p class="empty">먼저 차종을 선택해 주세요.</p></div>
+    </div>
+
+    <div class="box">
+      <h2><span class="n">3</span>색상</h2>
+      <div id="colors"><p class="empty">트림을 선택하면 고를 수 있는 색상이 나옵니다.</p></div>
+    </div>
+
+    <div class="box">
+      <h2><span class="n">4</span>선택 옵션 <small id="optCount"></small></h2>
+      <div class="list" id="options"><p class="empty">트림을 선택하면 고를 수 있는 옵션이 나옵니다.</p></div>
+      <p class="hint" style="margin-top:10px">일부 옵션은 함께 선택할 수 없거나 다른 옵션이 먼저 필요할 수 있습니다. 상담 때 가능 여부를 확정해 드립니다.</p>
+    </div>
+
+    <div class="box">
+      <h2><span class="n">5</span>할부 조건</h2>
+      <div class="fields">
+        <div class="field">
+          <label for="discount">할인 금액 (원)</label>
+          <input id="discount" inputmode="numeric" placeholder="0">
+        </div>
+        <div class="field">
+          <label for="down">선수금 (원)</label>
+          <input id="down" inputmode="numeric" placeholder="0">
+        </div>
+        <div class="field">
+          <label>할부 기간</label>
+          <div class="seg" id="months"></div>
+        </div>
+        <div class="field">
+          <label for="rate">연 금리 (%)</label>
+          <input id="rate" inputmode="decimal" value="5.5">
+        </div>
+      </div>
+      <p class="hint" style="margin-top:10px">금리는 이달 프로모션과 신용도에 따라 달라집니다. 정확한 금리는 상담 때 안내해 드립니다. (계산 방식: 원리금균등)</p>
+    </div>
+  </div>
+
+  <aside class="sum">
+    <div class="box">
+      <h3 id="sName">차종을 선택해 주세요</h3>
+      <div class="car" id="sTrim">&nbsp;</div>
+      <div class="rows" id="sRows"></div>
+      <div class="total"><span>차량 가격</span><b id="sTotal">0원</b></div>
+      <div class="monthly">
+        <small id="sMonthsLabel">월 할부금</small>
+        <b id="sMonthly">0원</b>
+        <div class="mini" id="sLoan"></div>
+      </div>
+      <div class="act">
+        <a class="btn btn-primary" id="smsBtn" href="sms:010-9294-9094"><i class="fa-solid fa-comment-sms"></i>이 견적으로 문자 상담</a>
+        <button class="btn btn-kakao" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i>견적 복사 (카톡에 붙여넣기)</button>
+        <a class="btn btn-line" href="tel:010-9294-9094"><i class="fa-solid fa-phone"></i>010-9294-9094 전화 상담</a>
+      </div>
+      <p class="note" id="sNote"></p>
+    </div>
+  </aside>
+</main>
+
+<div class="mbar">
+  <div class="v"><small id="mLabel">차량 가격</small><b id="mVal">0원</b></div>
+  <a href="#" id="mSms">문자로 견적 받기</a>
+</div>
+
+<footer>
+  <div class="wrap">© 견상은 카마스터 · 현대자동차 미추홀대리점 · 인천 송림로 255 · <a href="./" style="text-decoration:underline">홈으로</a></div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="cars-data.js"></script>
+<script>
+(function(){
+  var PHONE = "010-9294-9094";
+  var CARS = window.CARS || [];
+  var CATS = ["전체","경차","세단","SUV","전기차","수소차"];
+  var MONTHS = [12,24,36,48,60,72];
+  var st = { cat:"전체", car:null, trim:null, ext:null, int:null, opts:{}, months:60 };
+  var $ = function(id){ return document.getElementById(id); };
+  var won = function(n){ return Math.round(n).toLocaleString("ko-KR") + "원"; };
+  var man = function(n){ return (Math.round(n/10000)).toLocaleString("ko-KR") + "만원"; };
+  var num = function(el){ var v = parseFloat(String(el.value).replace(/[^0-9.]/g,"")); return isFinite(v) ? v : 0; };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); };
+  var allowed = function(item){ return !item.trims || !st.trim || item.trims.indexOf(st.trim.id) > -1; };
+  var findCar = function(id){ for(var i=0;i<CARS.length;i++) if(CARS[i].id===id) return CARS[i]; return null; };
+
+  function renderCats(){
+    $("cats").innerHTML = CATS.filter(function(c){ return c==="전체" || CARS.some(function(m){return m.category===c;}); })
+      .map(function(c){ return '<button class="chip'+(st.cat===c?' on':'')+'" data-c="'+c+'">'+c+'</button>'; }).join("");
+  }
+  function renderModels(){
+    $("models").innerHTML = CARS.filter(function(m){ return st.cat==="전체" || m.category===st.cat; }).map(function(m){
+      var min = Math.min.apply(null, m.trims.map(function(t){return t.price;}));
+      return '<button class="model'+(st.car&&st.car.id===m.id?' on':'')+'" data-id="'+m.id+'"><b>'+esc(m.name)+'</b><small>'+esc(m.category)+' · '+man(min)+'~</small></button>';
+    }).join("");
+  }
+  function renderTrims(){
+    var m = st.car; if(!m) return;
+    var html = "", last = null;
+    m.trims.forEach(function(t){
+      if(t.powertrain !== last){ html += '<div class="grp">'+esc(t.powertrain)+'</div>'; last = t.powertrain; }
+      html += '<label class="pick'+(st.trim&&st.trim.id===t.id?' on':'')+'"><input type="radio" name="trim" value="'+t.id+'"'+(st.trim&&st.trim.id===t.id?' checked':'')+'><span class="t"><b>'+esc(t.name)+'</b></span><span class="p">'+won(t.price)+'</span></label>';
+    });
+    $("trims").innerHTML = html;
+  }
+  function colorList(list, key, title){
+    var items = list.filter(allowed);
+    if(!items.length) return "";
+    return '<div><div class="grp">'+title+'</div><div class="list">'+items.map(function(c,i){
+      var on = st[key] === c.name;
+      return '<label class="pick'+(on?' on':'')+'"><input type="radio" name="'+key+'" value="'+esc(c.name)+'"'+(on?' checked':'')+'><span class="t"><b>'+esc(c.name)+'</b></span><span class="p">'+(c.price?'+'+won(c.price):'기본')+'</span></label>';
+    }).join("")+'</div></div>';
+  }
+  function renderColors(){
+    var m = st.car;
+    if(!m || !st.trim){ $("colors").innerHTML = '<p class="empty">트림을 선택하면 고를 수 있는 색상이 나옵니다.</p>'; return; }
+    $("colors").innerHTML = '<div class="cols">'+colorList(m.exterior,"ext","외장 색상")+colorList(m.interior,"int","내장 색상")+'</div>';
+  }
+  function renderOptions(){
+    var m = st.car;
+    if(!m || !st.trim){ $("options").innerHTML = '<p class="empty">트림을 선택하면 고를 수 있는 옵션이 나옵니다.</p>'; $("optCount").textContent=""; return; }
+    var items = m.options.map(function(o,i){ return {o:o,i:i}; }).filter(function(x){ return allowed(x.o); });
+    $("optCount").textContent = items.length ? items.length+"개 선택 가능" : "";
+    $("options").innerHTML = items.length ? items.map(function(x){
+      var on = !!st.opts[x.i];
+      return '<label class="pick'+(on?' on':'')+'"><input type="checkbox" value="'+x.i+'"'+(on?' checked':'')+'><span class="t"><b>'+esc(x.o.name)+'</b>'+(x.o.desc&&x.o.desc!==x.o.name?'<small>'+esc(x.o.desc)+'</small>':'')+'</span><span class="p">+'+won(x.o.price)+'</span></label>';
+    }).join("") : '<p class="empty">이 트림은 가격표에 별도 선택 옵션이 없습니다.</p>';
+  }
+  function renderMonths(){
+    $("months").innerHTML = MONTHS.map(function(n){ return '<button type="button" class="'+(st.months===n?'on':'')+'" data-m="'+n+'">'+n+'개월</button>'; }).join("");
+  }
+  function pickedColor(list, name){ for(var i=0;i<list.length;i++) if(list[i].name===name && allowed(list[i])) return list[i]; return null; }
+
+  function calc(){
+    var m = st.car, t = st.trim;
+    var res = { base:0, ext:null, int:null, opts:[], total:0 };
+    if(!m || !t) return res;
+    res.base = t.price;
+    res.ext = pickedColor(m.exterior, st.ext);
+    res.int = pickedColor(m.interior, st.int);
+    m.options.forEach(function(o,i){ if(st.opts[i] && allowed(o)) res.opts.push(o); });
+    res.total = res.base + (res.ext?res.ext.price:0) + (res.int?res.int.price:0) + res.opts.reduce(function(s,o){return s+o.price;},0);
+    var discount = Math.min(num($("discount")), res.total);
+    res.discount = discount;
+    res.pay = res.total - discount;
+    res.down = Math.min(num($("down")), res.pay);
+    res.loan = res.pay - res.down;
+    var r = num($("rate"))/100/12, n = st.months;
+    res.monthly = res.loan<=0 ? 0 : (r===0 ? res.loan/n : res.loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1));
+    res.interest = res.monthly*n - res.loan;
+    return res;
+  }
+
+  function quoteText(c){
+    var m = st.car, t = st.trim;
+    var L = ["[견적 문의] 홈페이지 견적 계산기", m.name+" "+(m.year||""), "트림: "+t.powertrain+" "+t.name+" ("+won(t.price)+")"];
+    if(c.ext) L.push("외장: "+c.ext.name+(c.ext.price?" (+"+won(c.ext.price)+")":""));
+    if(c.int) L.push("내장: "+c.int.name+(c.int.price?" (+"+won(c.int.price)+")":""));
+    if(c.opts.length) L.push("옵션: "+c.opts.map(function(o){return o.name;}).join(", "));
+    L.push("차량 가격: "+won(c.total));
+    if(c.discount) L.push("할인: -"+won(c.discount));
+    L.push("할부: 선수금 "+won(c.down)+" / "+st.months+"개월 / 연 "+num($("rate"))+"% → 월 약 "+won(c.monthly));
+    L.push("이 조건으로 정확한 견적 부탁드립니다.");
+    return L.join("\n");
+  }
+  function smsHref(text){ return "sms:"+PHONE+"?body="+encodeURIComponent(text); }
+
+  function renderSummary(){
+    var c = calc(), m = st.car, t = st.trim;
+    $("sName").textContent = m ? m.name : "차종을 선택해 주세요";
+    $("sTrim").textContent = t ? (t.powertrain+" · "+t.name) : (m ? "트림을 선택해 주세요" : " ");
+    var rows = "";
+    if(t){
+      rows += '<div class="row"><span>기본 가격</span><b>'+won(c.base)+'</b></div>';
+      if(c.ext && c.ext.price) rows += '<div class="row"><span>외장 '+esc(c.ext.name)+'</span><b>+'+won(c.ext.price)+'</b></div>';
+      if(c.int && c.int.price) rows += '<div class="row"><span>내장 '+esc(c.int.name)+'</span><b>+'+won(c.int.price)+'</b></div>';
+      c.opts.forEach(function(o){ rows += '<div class="row sub"><span>'+esc(o.name)+'</span><span>+'+won(o.price)+'</span></div>'; });
+      if(c.discount) rows += '<div class="row"><span>할인</span><b style="color:#d6336c">-'+won(c.discount)+'</b></div>';
+    }
+    $("sRows").innerHTML = rows;
+    $("sRows").style.display = rows ? "" : "none";
+    $("sTotal").textContent = won(c.discount ? c.pay : c.total);
+    $("sMonthsLabel").textContent = "월 할부금 ("+st.months+"개월)";
+    $("sMonthly").textContent = won(c.monthly);
+    $("sLoan").textContent = t ? ("할부원금 "+won(c.loan)+" · 총 이자 약 "+won(Math.max(0,c.interest))) : "";
+    var note = "";
+    if(m){
+      note = "※ "+esc(m.year||"")+" 가격표 기준("+esc(m.taxNote||"")+"). 가격 정리일 "+(window.PRICE_UPDATED||"")+". "+
+        "탁송료·취득세·공채·보험료는 포함되지 않았습니다. 실제 계약 금액은 출고 시점 가격과 프로모션에 따라 달라질 수 있습니다.";
+      if(m.source){ var u = String(m.source).split(/\s*;\s*/)[0]; if(/^https?:/.test(u)) note += ' <a href="'+esc(u)+'" target="_blank" rel="noopener">가격 출처</a>'; }
+    } else {
+      note = "※ 참고용 예상 견적입니다. 탁송료·취득세·보험료는 별도이며, 정확한 금액은 상담 때 안내해 드립니다.";
+    }
+    $("sNote").innerHTML = note;
+    var text = t ? quoteText(c) : "[견적 문의] 홈페이지 보고 연락드립니다.";
+    $("smsBtn").href = smsHref(text);
+    $("mSms").href = smsHref(text);
+    $("mLabel").textContent = t ? ("월 "+won(c.monthly)+" · "+st.months+"개월") : "차량 가격";
+    $("mVal").textContent = won(c.discount ? c.pay : c.total);
+    saveHash();
+  }
+
+  function saveHash(){
+    if(!st.car) return;
+    var p = ["car="+st.car.id];
+    if(st.trim) p.push("trim="+st.trim.id);
+    var o = Object.keys(st.opts).filter(function(k){return st.opts[k];});
+    if(o.length) p.push("opt="+o.join("."));
+    if(st.ext) p.push("ext="+encodeURIComponent(st.ext));
+    if(st.int) p.push("int="+encodeURIComponent(st.int));
+    p.push("m="+st.months);
+    try{ history.replaceState(null,"","#"+p.join("&")); }catch(e){}
+  }
+  function loadHash(){
+    var h = {}; location.hash.replace(/^#/,"").split("&").forEach(function(kv){ var a=kv.split("="); if(a[0]) h[a[0]]=decodeURIComponent(a[1]||""); });
+    var m = findCar(h.car); if(!m) return;
+    st.car = m;
+    st.trim = m.trims.filter(function(t){return t.id===h.trim;})[0] || null;
+    if(h.opt) h.opt.split(".").forEach(function(i){ st.opts[i]=true; });
+    st.ext = h.ext || null; st.int = h["int"] || null;
+    if(MONTHS.indexOf(+h.m)>-1) st.months = +h.m;
+  }
+
+  function selectCar(id){
+    st.car = findCar(id); st.trim = null; st.ext = null; st.int = null; st.opts = {};
+    renderModels(); renderTrims(); renderColors(); renderOptions(); renderSummary();
+  }
+  function selectTrim(id){
+    st.trim = st.car.trims.filter(function(t){return t.id===id;})[0];
+    // 트림을 바꾸면 그 트림에서 고를 수 없는 색상·옵션은 자동 해제
+    if(st.ext && !pickedColor(st.car.exterior, st.ext)) st.ext = null;
+    if(st.int && !pickedColor(st.car.interior, st.int)) st.int = null;
+    Object.keys(st.opts).forEach(function(i){ if(!allowed(st.car.options[i])) delete st.opts[i]; });
+    var ex = st.car.exterior.filter(allowed), it = st.car.interior.filter(allowed);
+    if(!st.ext && ex.length) st.ext = ex[0].name;
+    if(!st.int && it.length) st.int = it[0].name;
+    renderTrims(); renderColors(); renderOptions(); renderSummary();
+  }
+
+  // 이벤트
+  $("cats").addEventListener("click", function(e){ var b=e.target.closest(".chip"); if(!b) return; st.cat=b.dataset.c; renderCats(); renderModels(); });
+  $("models").addEventListener("click", function(e){ var b=e.target.closest(".model"); if(!b) return; selectCar(b.dataset.id);
+    if(window.innerWidth<900) $("trims").scrollIntoView({behavior:"smooth",block:"start"}); });
+  $("trims").addEventListener("change", function(e){ if(e.target.name==="trim") selectTrim(e.target.value); });
+  $("colors").addEventListener("change", function(e){ if(e.target.name==="ext"||e.target.name==="int"){ st[e.target.name]=e.target.value; renderColors(); renderSummary(); } });
+  $("options").addEventListener("change", function(e){ if(e.target.type!=="checkbox") return; if(e.target.checked) st.opts[e.target.value]=true; else delete st.opts[e.target.value]; renderOptions(); renderSummary(); });
+  $("months").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; st.months=+b.dataset.m; renderMonths(); renderSummary(); });
+  ["discount","down"].forEach(function(id){
+    $(id).addEventListener("input", function(){ var v=$(id).value.replace(/[^0-9]/g,""); $(id).value = v ? (+v).toLocaleString("ko-KR") : ""; renderSummary(); });
+  });
+  $("rate").addEventListener("input", renderSummary);
+  $("mSms").addEventListener("click", function(e){ if(!st.trim){ e.preventDefault(); $("models").scrollIntoView({behavior:"smooth"}); toast("차종과 트림을 먼저 골라주세요"); } });
+  $("copyBtn").addEventListener("click", function(){
+    if(!st.trim){ toast("차종과 트림을 먼저 골라주세요"); return; }
+    var text = quoteText(calc());
+    var done = function(){ toast("견적이 복사되었습니다. 카톡이나 문자에 붙여넣어 보내주세요."); };
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+    else { fallbackCopy(text); done(); }
+  });
+  function fallbackCopy(text){ var ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(e){} document.body.removeChild(ta); }
+  var tt; function toast(msg){ var el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){el.classList.remove("show");},2200); }
+
+  loadHash();
+  renderCats(); renderModels(); renderTrims(); renderColors(); renderOptions(); renderMonths(); renderSummary();
+})();
+</script>
+</body>
+</html>
